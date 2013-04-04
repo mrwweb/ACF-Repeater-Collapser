@@ -1,0 +1,33 @@
+.field-repeater-toggle {
+	float:right;
+	margin-bottom: 10px !important;
+}
+
+/* Collapsed States */
+.collapsed-repeater td.remove {
+	/*display: none; */
+}
+
+.collapsed-repeater .acf_input-wrap tr {
+	display: none;
+}
+
+.collapsed-repeater .acf_input-wrap tr:first-child {
+	display: table-row;
+}
+
+.collapsed-repeater .acf_input {
+	position: relative;
+}
+
+.collapsed-repeater .acf_input:after {
+	position: absolute;
+	top: 0; bottom: 0; left: 0px; right: 0;
+	display: block;
+	content: ' ';
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba( 244, 244, 244, .2 )), to(rgba( 244, 244, 244, 1 )));
+	background: -o-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
+	background: -moz-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
+	background: -webkit-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
+	background: linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
+}
