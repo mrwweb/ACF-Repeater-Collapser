@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: ACF Repeater Sorter
+ * Plugin Name: Advanced Custom Fields Repeater Collapser
  * Description: Provides a way to collapse and expand repeater field instances in order to enable better sorting.
- * Version 0.2
+ * Version 1.0
  */
 
 /* Load the javascript and CSS files on the ACF admin pages */
