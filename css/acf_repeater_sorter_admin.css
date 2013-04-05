@@ -3,11 +3,6 @@
 	margin-bottom: 10px !important;
 }
 
-/* Collapsed States */
-.collapsed-repeater td.remove {
-	/*display: none; */
-}
-
 .collapsed-repeater .acf_input-wrap tr {
 	display: none;
 }
@@ -20,6 +15,7 @@
 	position: relative;
 }
 
+/* "Masks" the first field in order to prevent clicking on it */
 .collapsed-repeater .acf_input:after {
 	position: absolute;
 	top: 0; bottom: 0; left: 0px; right: 0;
