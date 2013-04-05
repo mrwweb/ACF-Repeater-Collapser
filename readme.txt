@@ -1,9 +1,9 @@
 === Advanced Custom Fields Repeater Collapser ===
 Contributors: mrwweb
 Tags: advanced custom fields, acf, repeater
-Requires at least: 3.0.1
+Requires at least: 3.0.0
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
-Tested up to: 3.5
+Tested up to: 3.6-beta1
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Easier sorting for large repeater fields in Advanced Custom Fields plugin
 
 == Description ==
 
-**This plugin requires both the [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) plugin *AND* its paid [Repeater Field add-on](http://www.advancedcustomfields.com/add-ons/repeater-field/).**
+**This plugin requires both the [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) plugin (version 4.0+ only) *AND* its paid [Repeater Field add-on](http://www.advancedcustomfields.com/add-ons/repeater-field/).**
 
 The repeater field is a great tool in ACF, but if you have more than few fields, it can be very unwieldy to sort. This plugin collapses each instance of the repeater field to allow for easy sorting.
 
