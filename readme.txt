@@ -11,7 +11,7 @@ Easier sorting for large repeater fields in Advanced Custom Fields plugin
 
 == Description ==
 
-**This plugin requires both the [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) plugin *AND* it's paid [Repeater Field add-on](http://www.advancedcustomfields.com/add-ons/repeater-field/).**
+**This plugin requires both the [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) plugin *AND* its paid [Repeater Field add-on](http://www.advancedcustomfields.com/add-ons/repeater-field/).**
 
 The repeater field is a great tool in ACF, but if you have more than few fields, it can be very unwieldy to sort. This plugin collapses each instance of the repeater field to allow for easy sorting.
 
@@ -29,9 +29,10 @@ This plugin began as a [support forum thread](http://support.advancedcustomfield
 
 == Screenshots ==
 
-1.
-
-2. 
+1. Even with a few fields per repeater instance, it becomes unwieldy to sort.
+2. This plugins creates a new Collapse/Expand button.
+3. When collapsed, only the first field for each repeated fieldset is shown.
+4. Now it's easy to click-and-drag to change the field order.
 
 == Changelog ==
 
