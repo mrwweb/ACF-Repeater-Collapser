@@ -7,7 +7,6 @@
 
 /* Load the javascript and CSS files on the ACF admin pages */
 add_action( 'acf/input/admin_enqueue_scripts', 'acf_repeater_sorter_assets' );
-add_action( 'acf_print_styles-input', 'acf_repeater_sorter_styles' ); 
 function acf_repeater_sorter_assets() {
 	wp_enqueue_script(
 		'acf_repeater_sorter_admin_js',

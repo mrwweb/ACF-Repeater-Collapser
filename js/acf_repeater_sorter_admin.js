@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
 
 	$collapseButton = '<input class="button field-repeater-toggle" type="button" value="Collapse Fields" />';
 
-	$('.field-repeater').each( function() {
+	$('.field_type-repeater').each( function() {
 
 		if( $( '.acf-input-table', $(this) ).hasClass('row_layout') ) {
 			$(this).prepend( $collapseButton );
