@@ -1,4 +1,4 @@
-=== ACF Repeater Collapse to Sort ===
+=== Advanced Custom Fields Repeater Sorter ===
 Contributors: mrwweb
 Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.1
