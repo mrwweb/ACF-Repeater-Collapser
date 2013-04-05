@@ -17,6 +17,8 @@ The repeater field is a great tool in ACF, but if you have more than few fields,
 
 To help identify each repeater field group, the first field of each repeated field group is shown. See screenshots for an example.
 
+Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Collapser).
+
 This plugin began as a [support forum thread](http://support.advancedcustomfields.com/discussion/comment/16239) on the ACF site.
 
 == Installation ==
