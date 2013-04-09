@@ -4,7 +4,7 @@ Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.0
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
 Tested up to: 3.6-beta1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,14 +36,19 @@ This plugin began as a [support forum thread](http://support.advancedcustomfield
 4. Now it's easy to click-and-drag to change the field order.
 
 == Changelog ==
+= 1.0.2 =
+* Fixed missing semicolon. Presumably source of update issue.
 
 = 1.0.1 =
-* Fixing mismatched filenames.
+* Fixed mismatched filenames.
 
 = 1.0 =
 * Initial commit. Submitted to plugin repository.
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+Major plugin fix & resolving update error
 
 = 1.0.1 =
 The previous version probably didn't work. Sorry! Use this one.
