@@ -4,7 +4,7 @@ Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.0
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
 Tested up to: 3.6-beta1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,5 +37,13 @@ This plugin began as a [support forum thread](http://support.advancedcustomfield
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixing mismatched filenames.
+
 = 1.0 =
 * Initial commit. Submitted to plugin repository.
+
+== Upgrade Notice ==
+
+= 1.0.1 =
+The previous version probably didn't work. Sorry! Use this one.
