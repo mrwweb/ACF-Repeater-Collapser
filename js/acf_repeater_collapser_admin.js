@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
 	$collapseButton = '<input class="button field-repeater-toggle" type="button" value="Collapse Fields" />';
 
 	// find each repeater instance, add the button if the field uses the row layout
-	$('.field_type-repeater').each( function() {
+	$('.field_type-repeater, .field_type-flexible_content').each( function() {
 		if( $( '.acf-input-table', $(this) ).hasClass('row_layout') ) {
 			$(this).prepend( $collapseButton );
 		}
