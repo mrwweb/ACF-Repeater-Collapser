@@ -3,6 +3,11 @@
 	margin-bottom: 10px !important;
 }
 
+.acf_flexible_content,
+.repeater {
+  clear: both;
+}
+
 .collapsed-repeater .acf_input-wrap tr {
 	display: none;
 }
