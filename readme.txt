@@ -12,7 +12,7 @@ Easier sorting for large repeated fields in the Advanced Custom Fields plugin.
 
 == Description ==
 
-**This plugin requires both the [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) plugin (version 4.0+ only) *AND* one or both of the [Repeater Field]](http://www.advancedcustomfields.com/add-ons/repeater-field/) or [Flexible Content Field](http://www.advancedcustomfields.com/add-ons/flexible-content-field/) paid add-ons.**
+**This plugin requires both the [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) plugin (version 4.0+ only) *AND* one or both of the [Repeater Field](http://www.advancedcustomfields.com/add-ons/repeater-field/) or [Flexible Content Field](http://www.advancedcustomfields.com/add-ons/flexible-content-field/) paid add-ons.**
 
 Both add-ons make "ACF" much more powerful, but if you have more than few fields in either, it becomes unwieldy to sort. This plugin collapses each instance of the repeated fields—only for the "Row" layout with the Repeater Field—to allow for easy sorting.
 
@@ -23,6 +23,7 @@ Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Col
 This plugin began as a [support forum thread](http://support.advancedcustomfields.com/discussion/comment/16239) on the ACF site.
 
 Other contributors:
+
 * [brasofilo](http://profiles.wordpress.org/brasofilo/)
 * [weskoop](http://profiles.wordpress.org/weskoop/)
 
