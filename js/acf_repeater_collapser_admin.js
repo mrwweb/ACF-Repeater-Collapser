@@ -7,15 +7,15 @@ jQuery(document).ready(function($) {
 	    $(this).parent().toggleClass('collapsed-repeater');
 	    
 	    // Nice Button Text
-	    if( $(this).attr('value') == 'Collapse Fields' ) {
-	    	$(this).attr('value', 'Expand Fields');
+	    if( $(this).text() == 'Collapse Fields' ) {
+	    	$(this).text('Expand Fields');
 	    } else {
-	    	$(this).attr('value', 'Collapse Fields');
+	    	$(this).text('Collapse Fields');
 	    }
 	}
 
 	// HTML to put above each repeater instance
-	$collapseButton = '<input class="button field-repeater-toggle" type="button" value="Collapse Fields" />';
+	$collapseButton = '<button type="button" role="button" class="button field-repeater-toggle">Collapse Fields</a>';
 
 	// find each repeater instance, add the button if the field uses the row layout
 	$('.field_type-repeater, .field_type-flexible_content').each( function() {
