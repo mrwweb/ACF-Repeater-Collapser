@@ -30,9 +30,12 @@ jQuery(document).ready(function($) {
 	});
 
 	// bind the click event to the toggle function
-	$( '.field-repeater-toggle' ).on(
+	// delegated to higher DOM element to handle dynamically added repeaters
+	// "div" makes sure event is only bound once
+	$( 'div.field_type-repeater, div.field_type-flexible_content' ).on(
 		'click',
+		'.field-repeater-toggle',
 		acf_repeater_toggle
-	)
+	);
 
 });
