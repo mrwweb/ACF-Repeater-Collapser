@@ -19,8 +19,13 @@ jQuery(document).ready(function($) {
 
 	// find each repeater instance, add the button if the field uses the row layout
 	$('.field_type-repeater, .field_type-flexible_content').each( function() {
-		if( $( '.acf-input-table', $(this) ).hasClass('row_layout') ) {
-			$(this).prepend( $collapseButton );
+		$repeater = $(this);
+		if( $( '.acf-input-table', $repeater ).hasClass('row_layout') ) {
+			if( $repeater.is( 'tr' ) ) {
+				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseButton );
+			} else {
+				$repeater.prepend( $collapseButton );
+			}
 		}
 	});
 
