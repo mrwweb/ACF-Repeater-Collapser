@@ -57,6 +57,11 @@ This is the most-requested feature. Consider submitting a pull request [on GitHu
 4. Now it's easy to click-and-drag to change the field order.
 
 == Changelog ==
+= 1.3.0 (DATE) =
+* [New] Ability to collapse single fields
+* Clarified button text and new icons
+* Thank you to NAME/LINK for sponsoring this update!
+
 = 1.2.0 (22 Apr 2014) =
 * [New] Support for nexted repeater and flexible field content. (Thanks to @philiphetue)
 * Use <button> element in admin for cleaner markup
