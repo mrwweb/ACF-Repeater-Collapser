@@ -7,24 +7,24 @@ jQuery(document).ready(function($) {
 	    $(this).parent().toggleClass('collapsed-repeater');
 	    
 	    // Nice Button Text
-	    if( $(this).text() == 'Collapse Fields' ) {
-	    	$(this).text('Expand Fields');
+	    if( $(this).text() == 'Collapse All Fields' ) {
+	    	$(this).text('Expand All Fields');
 	    } else {
-	    	$(this).text('Collapse Fields');
+	    	$(this).text('Collapse All Fields');
 	    }
 	}
 
 	// HTML to put above each repeater instance
-	$collapseButton = '<button type="button" role="button" class="button field-repeater-toggle">Collapse Fields</a>';
+	$collapseAllButton = '<button type="button" role="button" class="button field-repeater-toggle">Collapse All Fields</a>';
 
 	// find each repeater instance, add the button if the field uses the row layout
 	$('.field_type-repeater, .field_type-flexible_content').each( function() {
 		$repeater = $(this);
 		if( $( '.acf-input-table', $repeater ).hasClass('row_layout') ) {
 			if( $repeater.is( 'tr' ) ) {
-				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseButton );
+				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseAllButton );
 			} else {
-				$repeater.prepend( $collapseButton );
+				$repeater.prepend( $collapseAllButton );
 			}
 		}
 	});
