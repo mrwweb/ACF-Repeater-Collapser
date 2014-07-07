@@ -3,6 +3,16 @@
 	margin: -5px 0 15px !important;
 }
 
+.field-repeater-toggle::before {
+	content: "\f506";
+	display: inline-block;
+	margin: 3px 5px 0 0;
+	-webkit-font-smoothing: antialiased;
+	font: normal 20px/1 'dashicons';
+	vertical-align: top;
+	color: #777;
+}
+
 .acf_flexible_content,
 .repeater {
   clear: both;

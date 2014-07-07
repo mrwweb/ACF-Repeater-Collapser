@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 	}
 
 	// HTML to put above each repeater instance
-	$collapseAllButton = '<button type="button" role="button" class="button field-repeater-toggle">Collapse All Fields</a>';
+	$collapseAllButton = '<button type="button" role="button" class="button field-repeater-toggle">Collapse All Fields</button>';
 
 	// find each repeater instance, add the button if the field uses the row layout
 	$('.field_type-repeater, .field_type-flexible_content').each( function() {
