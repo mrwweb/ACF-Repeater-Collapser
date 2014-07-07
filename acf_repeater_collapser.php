@@ -9,7 +9,8 @@
  */
 
 /* Load the javascript and CSS files on the ACF admin pages */
-add_action( 'acf/input/admin_enqueue_scripts', 'acf_repeater_collapser_assets' );
+// 11 helps take precedence over core styles
+add_action( 'acf/input/admin_enqueue_scripts', 'acf_repeater_collapser_assets', 11 );
 function acf_repeater_collapser_assets() {
 	wp_enqueue_script(
 		'acf_repeater_collapser_admin_js',

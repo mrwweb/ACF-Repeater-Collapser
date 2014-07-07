@@ -1,16 +1,37 @@
-.field-repeater-toggle {
+/* Expand / Collapse Buttons */
+.field-repeater-toggle-all {
 	float:right;
 	margin: -5px 0 15px !important;
 }
 
+.button.field-repeater-toggle-single {
+	padding: 1px 1px 0 1px;
+}
+.repeater-button-cell {
+	background: #f4f4f4 !important;
+	padding: 0 !important;
+	vertical-align: middle !important;
+	text-align: center !important;
+	border: 0 !important;
+	width: 30px !important;
+	/* Sorry 'bout the !importants. They are gross. Sadly, so are the ACF selectors I have to battle. */
+}
+
 .field-repeater-toggle::before {
 	content: "\f506";
-	display: inline-block;
-	margin: 3px 5px 0 0;
+	display: inline;
 	-webkit-font-smoothing: antialiased;
 	font: normal 20px/1 'dashicons';
-	vertical-align: top;
+	vertical-align: text-bottom;
 	color: #777;
+}
+.field-repeater-toggle-all::before {
+	margin: 3px 5px 0 0;
+}
+
+.collapsed-repeater .field-repeater-toggle-all::before,
+.collapsed-row .field-repeater-toggle-single::before {
+	content: "\f211";
 }
 
 .acf_flexible_content,
@@ -18,11 +39,13 @@
   clear: both;
 }
 
-.collapsed-repeater .acf_input-wrap tr {
+.collapsed-repeater .acf_input-wrap tr,
+.collapsed-row .acf_input-wrap tr {
 	display: none;
 }
 
-.collapsed-repeater .acf_input-wrap tr:first-child {
+.collapsed-repeater .acf_input-wrap tr:first-child,
+.collapsed-row .acf_input-wrap tr:first-child {
 	display: table-row;
 }
 
@@ -31,7 +54,8 @@
 }
 
 /* "Masks" the first field in order to prevent clicking on it */
-.collapsed-repeater .acf_input:after {
+.collapsed-repeater .acf_input::after,
+.collapsed-row  .acf_input-wrap tr::after {
 	position: absolute;
 	top: 0; bottom: 0; left: 0px; right: 0;
 	display: block;
