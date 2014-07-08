@@ -39,22 +39,19 @@
   clear: both;
 }
 
-.collapsed-repeater .acf_input-wrap tr,
-.collapsed-row .acf_input-wrap tr {
-	display: none;
-}
-
-.collapsed-repeater .acf_input-wrap tr:first-child,
-.collapsed-row .acf_input-wrap tr:first-child {
-	display: table-row;
-}
-
 .collapsed-repeater .acf_input {
 	position: relative;
 }
 
+.collapsed-row .acf_input-wrap tr {
+	display: none;
+}
+
+.collapsed-row .acf_input-wrap tr:first-child {
+	display: table-row;
+}
+
 /* "Masks" the first field in order to prevent clicking on it */
-.collapsed-repeater .acf_input::after,
 .collapsed-row  .acf_input-wrap tr::after {
 	position: absolute;
 	top: 0; bottom: 0; left: 0px; right: 0;
