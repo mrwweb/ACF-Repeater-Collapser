@@ -1,29 +1,47 @@
 jQuery(document).ready(function($) {
 
+	// toggle single rows
+	/*function acfRepeaterToggleRows( rows ) {
+		rows.each(function{
+			$row = $rowButton.parents('.row');
+			$rowButtonText = $('.screen-reader-text', $rowButton);
+		    if( false === $row.data('acf-row-collapsed') ) {
+		    	$row.addClass('collapsed-row').data('acf-row-collapsed',true);
+		    	$rowButtonText.text('Expand Row')
+		    } else {
+		    	$row.removeClass('collapsed-row').data('acf-row-collapsed',false);
+		    	$rowButtonText.text('Collapse Row')
+		    }
+		});
+	}*/
+
 	// toggle the class that collapses the repeater
 	// toggle appropriate button text
-	function acfRepeaterToggleAll() {
+	function acfRepeaterToggleAll( event ) {
 		$rowsetButton = $(this);
-		$rowsetWrapper = $(this).parents('.field');
-		$row = $('.row', $rowsetWrapper);
+		$rowsetWrapper = $(this).parent();
+		$rows = $('.row,.layout', $rowsetWrapper);
+		console.log($rows,$rowsetWrapper,$rowsetWrapper.data());
 	    
 	    // Change Row States & Add Button Text
 	    // Nice Button Text
 	    if( false === $rowsetWrapper.data('acf-rows-collapsed') ) {
-	    	$row.addClass('collapsed-row').data('acf-row-collapsed',true);
+	    	$rows.addClass('collapsed-row').data('acf-row-collapsed',true);
 	    	$rowsetWrapper.addClass('collapsed-repeater').data('acf-rows-collapsed',true);
 	    	$rowsetButton.text('Expand All Rows');
 	    } else {
-	    	$row.removeClass('collapsed-row').data('acf-row-collapsed',false);
+	    	$rows.removeClass('collapsed-row').data('acf-row-collapsed',false);
 	    	$rowsetWrapper.removeClass('collapsed-repeater').data('acf-rows-collapsed',false);
 	    	$rowsetButton.text('Collapse All Rows');
 	    }
+	    event.stopPropagation();
 	}
 
-	function acfRepeaterToggleSingle() {
+	function acfRepeaterToggleSingle( event ) {
 		$rowButton = $(this);
-		$row = $rowButton.parents('.row');
+		$row = $rowButton.closest('.row');
 		$rowButtonText = $('.screen-reader-text', $rowButton);
+		console.log($rowButton,$row,$row.data());
 	    
 	    // Nice Button Text
 	    if( false === $row.data('acf-row-collapsed') ) {
@@ -33,6 +51,7 @@ jQuery(document).ready(function($) {
 	    	$row.removeClass('collapsed-row').data('acf-row-collapsed',false);
 	    	$rowButtonText.text('Collapse Row')
 	    }
+	    event.stopPropagation();
 	}
 
 	// HTML to put above each repeater instance
@@ -45,10 +64,10 @@ jQuery(document).ready(function($) {
 		if( $( '.acf-input-table', $repeater ).hasClass('row_layout') ) {
 			$repeater.data('acf-rows-collapsed', false);
 			if( $repeater.is( 'tr' ) ) {
-				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseAllButton );
+				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseAllButton ).data('acf-rows-collapsed',false);
 				$('.row', $repeater ).data('acf-row-collapsed',false);
 			} else {
-				$repeater.prepend( $collapseAllButton );
+				$repeater.prepend( $collapseAllButton ).data('acf-rows-collapsed',false);
 				$('.row', $repeater ).data('acf-row-collapsed',false);
 			}
 		}
