@@ -1,17 +1,18 @@
 jQuery(document).ready(function($) {
 
-	// toggle the class that collapses the repeater
-	// toggle appropriate button text
-	function acfRepeaterToggleAll( event ) {
+	/**
+	 * toggles set of repeater rows or flexible fields
+	 */
+	function acfRepeaterToggleAll() {
 		$rowsetButton = $(this);
 		$rowsetWrapper = $(this).parent();
-		// select only nested or unnested repeater rows
+
+		// select either nested or unnested repeater rows, not both
 		if( true === $rowsetWrapper.data('acf-repeater-nested') ) {
 			$rows = $('.row:data(acf-repeater-nested),.layout', $rowsetWrapper);
 		} else {
 			$rows = $('.row,.layout', $rowsetWrapper).not(':data(acf-repeater-nested)');
 		}
-		console.log($rowsetWrapper.data());
 	    
 	    if( false === $rowsetWrapper.data('acf-rows-collapsed') ) {
 	    	$rows.addClass('collapsed-row').data('acf-row-collapsed',true);
@@ -22,14 +23,18 @@ jQuery(document).ready(function($) {
 	    	$rowsetWrapper.removeClass('collapsed-repeater').data('acf-rows-collapsed',false);
 	    	$rowsetButton.text('Collapse All Rows');
 	    }
+
+	    // prevent bubbling up to parent repeater rowset
 	    event.stopPropagation();
 	}
 
-	function acfRepeaterToggleSingle( event ) {
+	/**
+	 * toggles single repeater row or flexible field
+	 */
+	function acfRepeaterToggleSingle() {
 		$rowButton = $(this);
 		$row = $rowButton.closest('.row');
 		$rowButtonText = $('.screen-reader-text', $rowButton);
-		console.log($row.data());
 	    
 	    if( false === $row.data('acf-row-collapsed') ) {
 	    	$row.addClass('collapsed-row').data('acf-row-collapsed',true);
@@ -38,6 +43,8 @@ jQuery(document).ready(function($) {
 	    	$row.removeClass('collapsed-row').data('acf-row-collapsed',false);
 	    	$rowButtonText.text('Collapse Row');
 	    }
+
+	    // prevent bubbling up to parent row button
 	    event.stopPropagation();
 	}
 
@@ -45,11 +52,15 @@ jQuery(document).ready(function($) {
 	$collapseAllButton = '<button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-all">Collapse All Rows</button>';
 	$collapseSingleButton = '<td class="repeater-button-cell"><button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-single"><span class="screen-reader-text">Collapse Row</span></button></td>';
 
-	// find each repeater instance, add the button if the field uses the row layout
+	// find each repeater & flexible instance, add the button if the field uses the row layout
 	$('.field_type-repeater, .field_type-flexible_content').each( function() {
 		$repeater = $(this);
+
+		// only use this on row layout
 		if( $( '.acf-input-table', $repeater ).hasClass('row_layout') ) {
 			$repeater.data('acf-rows-collapsed', false);
+
+			// first: nested, second: parent
 			if( $repeater.is( 'tr' ) ) {
 				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseAllButton ).data('acf-rows-collapsed',false).data('acf-repeater-nested',true);
 				$('.row', $repeater ).data('acf-row-collapsed',false).data('acf-repeater-nested',true);
@@ -61,11 +72,12 @@ jQuery(document).ready(function($) {
 	});
 
 	// append single repeater collapse to each row of repeater field
+	// TODO: Support Individual Flexible Fields
 	$('.field_type-repeater .row_layout .row').each( function() {
 		$(this).prepend( $collapseSingleButton ).data('acf-row-collapsed',false);
 	});
 
-	// bind the click event to the toggle functions
+	// Bind click events to the toggle functions
 	// delegated to higher DOM element to handle dynamically added repeaters
 	// "div" makes sure event is only bound once
 	$( 'div.field_type-repeater, div.field_type-flexible_content' ).on(

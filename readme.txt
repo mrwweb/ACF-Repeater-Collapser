@@ -59,7 +59,7 @@ This is the most-requested feature. Consider submitting a pull request [on GitHu
 == Changelog ==
 = 1.3.0 (DATE) =
 * [New] Ability to collapse single fields
-* Clarified button text and new icons
+* Clarified button text and added icons to buttons for improved UI
 * Fixed errant closing tag on <button> element
 * Thank you to NAME/LINK for sponsoring this update!
 
