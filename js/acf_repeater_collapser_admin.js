@@ -5,10 +5,14 @@ jQuery(document).ready(function($) {
 	function acfRepeaterToggleAll( event ) {
 		$rowsetButton = $(this);
 		$rowsetWrapper = $(this).parent();
-		$rows = $('.row,.layout', $rowsetWrapper);
+		// select only nested or unnested repeater rows
+		if( true === $rowsetWrapper.data('acf-repeater-nested') ) {
+			$rows = $('.row:data(acf-repeater-nested),.layout', $rowsetWrapper);
+		} else {
+			$rows = $('.row,.layout', $rowsetWrapper).not(':data(acf-repeater-nested)');
+		}
+		console.log($rowsetWrapper.data());
 	    
-	    // Change Row States & Add Button Text
-	    // Nice Button Text
 	    if( false === $rowsetWrapper.data('acf-rows-collapsed') ) {
 	    	$rows.addClass('collapsed-row').data('acf-row-collapsed',true);
 	    	$rowsetWrapper.addClass('collapsed-repeater').data('acf-rows-collapsed',true);
@@ -25,8 +29,8 @@ jQuery(document).ready(function($) {
 		$rowButton = $(this);
 		$row = $rowButton.closest('.row');
 		$rowButtonText = $('.screen-reader-text', $rowButton);
+		console.log($row.data());
 	    
-	    // Nice Button Text
 	    if( false === $row.data('acf-row-collapsed') ) {
 	    	$row.addClass('collapsed-row').data('acf-row-collapsed',true);
 	    	$rowButtonText.text('Expand Row');
@@ -47,10 +51,10 @@ jQuery(document).ready(function($) {
 		if( $( '.acf-input-table', $repeater ).hasClass('row_layout') ) {
 			$repeater.data('acf-rows-collapsed', false);
 			if( $repeater.is( 'tr' ) ) {
-				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseAllButton ).data('acf-rows-collapsed',false);
-				$('.row', $repeater ).data('acf-row-collapsed',false);
+				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseAllButton ).data('acf-rows-collapsed',false).data('acf-repeater-nested',true);
+				$('.row', $repeater ).data('acf-row-collapsed',false).data('acf-repeater-nested',true);
 			} else {
-				$repeater.prepend( $collapseAllButton ).data('acf-rows-collapsed',false);
+				$repeater.prepend( $collapseAllButton ).data('acf-rows-collapsed',true);
 				$('.row', $repeater ).data('acf-row-collapsed',false);
 			}
 		}
