@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
 				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseAllButton ).data('acf-rows-collapsed',false).data('acf-repeater-nested',true);
 				$('.row', $repeater ).data('acf-row-collapsed',false).data('acf-repeater-nested',true);
 			} else {
-				$repeater.prepend( $collapseAllButton ).data('acf-rows-collapsed',true);
+				$repeater.prepend( $collapseAllButton ).data('acf-rows-collapsed',false);
 				$('.row', $repeater ).data('acf-row-collapsed',false);
 			}
 		}
