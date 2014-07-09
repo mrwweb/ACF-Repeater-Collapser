@@ -6,7 +6,6 @@ jQuery(document).ready(function($) {
 		$rowsetButton = $(this);
 		$rowsetWrapper = $(this).parent();
 		$rows = $('.row,.layout', $rowsetWrapper);
-		console.log($rows,$rowsetWrapper,$rowsetWrapper.data());
 	    
 	    // Change Row States & Add Button Text
 	    // Nice Button Text
@@ -26,15 +25,14 @@ jQuery(document).ready(function($) {
 		$rowButton = $(this);
 		$row = $rowButton.closest('.row');
 		$rowButtonText = $('.screen-reader-text', $rowButton);
-		console.log($rowButton,$row,$row.data());
 	    
 	    // Nice Button Text
 	    if( false === $row.data('acf-row-collapsed') ) {
 	    	$row.addClass('collapsed-row').data('acf-row-collapsed',true);
-	    	$rowButtonText.text('Expand Row')
+	    	$rowButtonText.text('Expand Row');
 	    } else {
 	    	$row.removeClass('collapsed-row').data('acf-row-collapsed',false);
-	    	$rowButtonText.text('Collapse Row')
+	    	$rowButtonText.text('Collapse Row');
 	    }
 	    event.stopPropagation();
 	}
