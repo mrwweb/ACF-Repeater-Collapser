@@ -1,20 +1,5 @@
 jQuery(document).ready(function($) {
 
-	// toggle single rows
-	/*function acfRepeaterToggleRows( rows ) {
-		rows.each(function{
-			$row = $rowButton.parents('.row');
-			$rowButtonText = $('.screen-reader-text', $rowButton);
-		    if( false === $row.data('acf-row-collapsed') ) {
-		    	$row.addClass('collapsed-row').data('acf-row-collapsed',true);
-		    	$rowButtonText.text('Expand Row')
-		    } else {
-		    	$row.removeClass('collapsed-row').data('acf-row-collapsed',false);
-		    	$rowButtonText.text('Collapse Row')
-		    }
-		});
-	}*/
-
 	// toggle the class that collapses the repeater
 	// toggle appropriate button text
 	function acfRepeaterToggleAll( event ) {
