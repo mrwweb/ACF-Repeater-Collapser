@@ -21,16 +21,22 @@ jQuery(document).ready(function($) {
 	 * Indicate a collapsed rowset
 	 */
 	function acfRepeaterExpandRowset( $wrapper ) {
+		$button = $('.field-repeater-toggle-all', $wrapper).first();
+
 		$wrapper.removeClass('collapsed-repeater')
 			.data('acf-rowset-collapsed', false);
+		$button.text('Collapse All Rows');
 	}
 	
 	/**
 	 * Indicate an expanded rowset
 	 */
 	function acfRepeaterCollapseRowset( $wrapper ) {
+		$button = $('.field-repeater-toggle-all', $wrapper).first();
+
 		$wrapper.addClass('collapsed-repeater')
 			.data('acf-rowset-collapsed', true);
+		$button.text('Expand All Rows');
 	}
 
 	/**
@@ -47,14 +53,13 @@ jQuery(document).ready(function($) {
 			$rows = $('.row,.layout', $rowsetWrapper).not(':data(acf-repeater-nested)');
 		}
 	    
+	    // toggle repeater state and all rows
 	    if( false === $rowsetWrapper.data('acf-rowset-collapsed') ) {
-	    	acfRepeaterCollapseRow( $rows );
 	    	acfRepeaterCollapseRowset( $rowsetWrapper );
-	    	$rowsetButton.text('Expand All Rows');
+	    	acfRepeaterCollapseRow( $rows );
 	    } else {
-	    	acfRepeaterExpandRow( $rows );
 	    	acfRepeaterExpandRowset( $rowsetWrapper );
-	    	$rowsetButton.text('Collapse All Rows');
+	    	acfRepeaterExpandRow( $rows );
 	    }
 
 	    // prevent bubbling up to parent repeater rowset
@@ -68,7 +73,15 @@ jQuery(document).ready(function($) {
 		$rowButton = $(this);
 		$rowButtonText = $('.screen-reader-text', $rowButton);
 		$row = $rowButton.closest('.row');
+
+		// select either parent repeater field wrapper
+		if( true === $row.data('acf-repeater-nested') ) {
+			$rowsetWrapper = $row.closest( '.inner' );
+		} else {
+			$rowsetWrapper = $row.closest('.field_type-repeater');
+		}
 	    
+	    // toggle the row state and button text
 	    if( false === $row.data('acf-row-collapsed') ) {
 	    	acfRepeaterCollapseRow( $row );
 	    	$rowButtonText.text('Expand Row');
@@ -77,8 +90,39 @@ jQuery(document).ready(function($) {
 	    	$rowButtonText.text('Collapse Row');
 	    }
 
+		if( true === acfRepeaterAllCollapsed( $rowsetWrapper ) ) {
+			acfRepeaterCollapseRowset( $rowsetWrapper );
+		} else {
+			acfRepeaterExpandRowset( $rowsetWrapper );
+		}
+
 	    // prevent bubbling up to parent row button
 	    event.stopPropagation();
+	}
+
+	/**
+	 * check to see if all rows in a rowset are collapsed
+	 * @param  obj $rowsetWrapper jquery object
+	 * @return bool                	true if all rows in rowset are collapsed
+	 */
+	function acfRepeaterAllCollapsed( $rowsetWrapper ) {
+		// select either nested or unnested repeater rows, not both
+		if( true === $rowsetWrapper.data('acf-repeater-nested') ) {
+			$rows = $('.row:data(acf-repeater-nested)', $rowsetWrapper);
+		} else {
+			$rows = $('.row', $rowsetWrapper).not(':data(acf-repeater-nested)');
+		}
+		
+		// store every row collapsed state in an array
+		var rowStates = new Array();
+		$rows.each( function() {
+			rowStates.push( $(this).data('acf-row-collapsed') );
+		});
+
+		// check if any rows are expanded
+		allCollapsed = 0 > $.inArray( false, rowStates );
+
+		return allCollapsed;
 	}
 
 	// HTML to put above each repeater instance
