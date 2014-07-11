@@ -152,10 +152,15 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	// iterator for adding IDs/aria-controls attributes to repeater buttons
+	i = 1;
 	// append single repeater collapse to each row of repeater field
 	// TODO: Support Individual Flexible Fields
 	$('.field_type-repeater .row_layout .row,.field_type-repeater .row_layout .row-clone').each( function() {
-		$(this).prepend( $collapseSingleButton ).data('acf-row-collapsed', false).attr('aria-expanded', true);
+		id = 'acf-repeater-' + i;
+		$(this).prepend( $collapseSingleButton ).data('acf-row-collapsed', false).attr('aria-expanded', true).attr('id','acf-repeater-' + i).attr('aria-live','off');
+		$('.field-repeater-toggle-single', $(this)).first().attr('aria-controls',id);
+		i++;
 	});
 
 	// Bind click events to the toggle functions
