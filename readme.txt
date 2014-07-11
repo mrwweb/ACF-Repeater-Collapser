@@ -41,7 +41,10 @@ To help identify each repeater field group when collapsed, the first field of ea
 As a work around, use a short field (like a text field or dropdown) as the first row in a repeatable fieldset.
 
 = Can I collapse individual rows? =
-This is the most-requested feature. Consider submitting a pull request [on GitHub](https://github.com/mrwweb/ACF-Repeater-Collapser) or sponsoring that update. ([Contact me](http://mrwweb.com/contact/) if you're interested in sponsoring the feature development.)
+Now you can, as of version 1.3.0.
+
+= What exactly is the "Collapse All Rows" button behavior =
+With the addition of the ability to collapse single rows, the button now is always in "Collapse" mode unless all rows are collapsed. Then it's "Expand."
 
 == Installation ==
 
@@ -82,6 +85,9 @@ This is the most-requested feature. Consider submitting a pull request [on GitHu
 * Initial commit. Submitted to plugin repository.
 
 == Upgrade Notice ==
+= 1.3.0 =
+New support for collapsing individual rows.
+
 = 1.1.0 =
 Support for "Flexible Content Fields" add-on thanks to @weskoop.
 
