@@ -18,6 +18,22 @@ jQuery(document).ready(function($) {
 	}
 
 	/**
+	 * Indicate a collapsed rowset
+	 */
+	function acfRepeaterExpandRowset( $wrapper ) {
+		$wrapper.removeClass('collapsed-repeater')
+			.data('acf-rowset-collapsed', false);
+	}
+	
+	/**
+	 * Indicate an expanded rowset
+	 */
+	function acfRepeaterCollapseRowset( $wrapper ) {
+		$wrapper.addClass('collapsed-repeater')
+			.data('acf-rowset-collapsed', true);
+	}
+
+	/**
 	 * toggles set of repeater rows or flexible fields
 	 */
 	function acfRepeaterToggleAll() {
@@ -31,14 +47,14 @@ jQuery(document).ready(function($) {
 			$rows = $('.row,.layout', $rowsetWrapper).not(':data(acf-repeater-nested)');
 		}
 	    
-	    if( false === $rowsetWrapper.data('acf-rows-collapsed') ) {
+	    if( false === $rowsetWrapper.data('acf-rowset-collapsed') ) {
 	    	acfRepeaterCollapseRow( $rows );
-	    	$rowsetWrapper.addClass('collapsed-repeater').data('acf-rows-collapsed', true);
+	    	acfRepeaterCollapseRowset( $rowsetWrapper );
 	    	$rowsetButton.text('Expand All Rows');
 	    } else {
 	    	acfRepeaterExpandRow( $rows );
-	    	$rowsetWrapper.removeClass('collapsed-repeater').data('acf-rows-collapsed', false);
-	    	$rowsetButton.text('Collapse All Rows').attr('aria-expanded', true);
+	    	acfRepeaterExpandRowset( $rowsetWrapper );
+	    	$rowsetButton.text('Collapse All Rows');
 	    }
 
 	    // prevent bubbling up to parent repeater rowset
@@ -50,8 +66,8 @@ jQuery(document).ready(function($) {
 	 */
 	function acfRepeaterToggleSingle() {
 		$rowButton = $(this);
-		$row = $rowButton.closest('.row');
 		$rowButtonText = $('.screen-reader-text', $rowButton);
+		$row = $rowButton.closest('.row');
 	    
 	    if( false === $row.data('acf-row-collapsed') ) {
 	    	acfRepeaterCollapseRow( $row );
@@ -75,15 +91,23 @@ jQuery(document).ready(function($) {
 
 		// only use this on row layout
 		if( $( '.acf-input-table', $repeater ).hasClass('row_layout') ) {
-			$repeater.data('acf-rows-collapsed', false).attr('aria-expanded', false);
+			$repeater.data('acf-rowset-collapsed', false).attr('aria-expanded', false);
 
 			// first: nested, second: parent
 			if( $repeater.is( 'tr' ) ) {
-				$repeater.children( 'td:last-child' ).children( '.inner' ).prepend( $collapseAllButton ).data('acf-rows-collapsed', false).data('acf-repeater-nested', true);
-				$('.row', $repeater ).data('acf-row-collapsed', false).data('acf-repeater-nested', true).attr('aria-expanded', true);
+				$repeater.children( 'td:last-child' )
+					.children( '.inner' )
+					.prepend( $collapseAllButton )
+					.data('acf-rowset-collapsed', false)
+					.data('acf-repeater-nested', true);
+				$('.row', $repeater ).data('acf-row-collapsed', false)
+					.data('acf-repeater-nested', true)
+					.attr('aria-expanded', true);
 			} else {
-				$repeater.prepend( $collapseAllButton ).data('acf-rows-collapsed', false);
-				$('.row', $repeater ).data('acf-row-collapsed', false).attr('aria-expanded', true);
+				$repeater.prepend( $collapseAllButton )
+					.data('acf-rowset-collapsed', false);
+				$('.row', $repeater ).data('acf-row-collapsed', false)
+					.attr('aria-expanded', true);
 			}
 		}
 	});

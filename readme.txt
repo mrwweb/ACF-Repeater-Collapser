@@ -61,6 +61,7 @@ This is the most-requested feature. Consider submitting a pull request [on GitHu
 * [New] Ability to collapse single fields
 * Clarified button text and added icons to buttons for improved UI
 * Fixed errant closing tag on <button> element
+* Added aria-expanded attributes on rows for improved accessibility
 * Thank you to NAME/LINK for sponsoring this update!
 
 = 1.2.0 (22 Apr 2014) =
