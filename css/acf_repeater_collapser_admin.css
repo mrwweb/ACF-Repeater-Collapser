@@ -8,11 +8,11 @@
 	padding: 1px 1px 0 1px;
 }
 .repeater-button-cell {
-	background: #f4f4f4 !important;
+	background: #f9f9f9 !important;
 	padding: 0 !important;
 	vertical-align: middle !important;
 	text-align: center !important;
-	border-right: 0 !important;
+	border-right-color: #e1e1e1 !important;
 	width: 30px !important;
 	/* Sorry 'bout the !importants. They are gross. Sadly, so are the ACF selectors I have to battle. */
 }
