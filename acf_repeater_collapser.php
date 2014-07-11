@@ -12,13 +12,18 @@
 // 11 helps take precedence over core styles
 add_action( 'acf/input/admin_enqueue_scripts', 'acf_repeater_collapser_assets', 11 );
 function acf_repeater_collapser_assets() {
-	wp_enqueue_script(
-		'acf_repeater_collapser_admin_js',
-		esc_url( plugins_url( 'js/acf_repeater_collapser_admin.js', __FILE__ ) ),
-		array( 'jquery' )
-	);
-	wp_enqueue_style(
-		'acf_repeater_collapser_admin_css',
-		esc_url( plugins_url( 'css/acf_repeater_collapser_admin.css', __FILE__ ) )
-	);
+	if( ! function_exists( 'acf_get_setting' ) ) {
+		// version 4.X
+		wp_enqueue_script(
+			'acf_repeater_collapser_admin_js',
+			esc_url( plugins_url( 'js/acf_repeater_collapser_admin.js', __FILE__ ) ),
+			array( 'jquery' )
+		);
+		wp_enqueue_style(
+			'acf_repeater_collapser_admin_css',
+			esc_url( plugins_url( 'css/acf_repeater_collapser_admin.css', __FILE__ ) )
+		);
+	} else {
+		// version 5.X
+	}
 }
