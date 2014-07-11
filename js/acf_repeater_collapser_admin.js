@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
 		}
 	    
 	    // toggle repeater state and all rows
-	    if( false === $rowsetWrapper.data('acf-rowset-collapsed') ) {
+	    if( true !== $rowsetWrapper.data('acf-rowset-collapsed') ) {
 	    	acfRepeaterCollapseRowset( $rowsetWrapper );
 	    	acfRepeaterCollapseRow( $rows );
 	    } else {
@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
 		}
 	    
 	    // toggle the row state and button text
-	    if( false === $row.data('acf-row-collapsed') ) {
+	    if( true !== $row.data('acf-row-collapsed') ) {
 	    	acfRepeaterCollapseRow( $row );
 	    	$rowButtonText.text('Expand Row');
 	    } else {
@@ -144,22 +144,18 @@ jQuery(document).ready(function($) {
 					.prepend( $collapseAllButton )
 					.data('acf-rowset-collapsed', false)
 					.data('acf-repeater-nested', true);
-				$('.row', $repeater ).data('acf-row-collapsed', false)
-					.data('acf-repeater-nested', true)
-					.attr('aria-expanded', true);
+				$('.row,.row-clone', $repeater ).data('acf-repeater-nested', true);
 			} else {
 				$repeater.prepend( $collapseAllButton )
 					.data('acf-rowset-collapsed', false);
-				$('.row', $repeater ).data('acf-row-collapsed', false)
-					.attr('aria-expanded', true);
 			}
 		}
 	});
 
 	// append single repeater collapse to each row of repeater field
 	// TODO: Support Individual Flexible Fields
-	$('.field_type-repeater .row_layout .row').each( function() {
-		$(this).prepend( $collapseSingleButton ).data('acf-row-collapsed', false);
+	$('.field_type-repeater .row_layout .row,.field_type-repeater .row_layout .row-clone').each( function() {
+		$(this).prepend( $collapseSingleButton ).data('acf-row-collapsed', false).attr('aria-expanded', true);
 	});
 
 	// Bind click events to the toggle functions
@@ -170,7 +166,7 @@ jQuery(document).ready(function($) {
 		'.field-repeater-toggle-all',
 		acfRepeaterToggleAll
 	);
-	$( '.field_type-repeater .row_layout .row' ).on(
+	$( '.field_type-repeater .row_layout' ).on(
 		'click',
 		'.field-repeater-toggle-single',
 		acfRepeaterToggleSingle
