@@ -156,8 +156,7 @@ jQuery(document).ready(function($) {
 
 	// iterator for adding IDs/aria-controls attributes to repeater buttons
 	i = 1;
-	// append single repeater collapse to each row of repeater field
-	// TODO: Support Individual Flexible Fields
+	// append single repeater collapse to each row of repeater field & flex field
 	$('.field_type-repeater .row_layout .row,.field_type-repeater .row_layout .row-clone').each( function() {
 		id = 'acf-repeater-' + i;
 		i++;
