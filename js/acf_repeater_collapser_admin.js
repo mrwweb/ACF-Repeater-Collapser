@@ -121,7 +121,6 @@ jQuery(document).ready(function($) {
 
 		// check if any rows are expanded
 		allCollapsed = 0 > $.inArray( false, rowStates );
-		console.log($rowsetWrapper,$rows,rowStates,allCollapsed);
 
 		return allCollapsed;
 	}
@@ -156,7 +155,7 @@ jQuery(document).ready(function($) {
 
 	// iterator for adding IDs/aria-controls attributes to repeater buttons
 	i = 1;
-	// append single repeater collapse to each row of repeater field & flex field
+	// append single repeater collapse to each row of repeater field
 	$('.field_type-repeater .row_layout .row,.field_type-repeater .row_layout .row-clone').each( function() {
 		id = 'acf-repeater-' + i;
 		i++;
@@ -169,6 +168,7 @@ jQuery(document).ready(function($) {
 			.attr('aria-controls',id);
 	});
 
+	// append single repeater collapse to flex fields
 	$('.field_type-flexible_content .layout').each( function() {
 		if( $('.acf-input-table', $(this)).hasClass('row_layout') ) {
 			id = 'acf-repeater-' + i;
