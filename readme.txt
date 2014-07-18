@@ -25,6 +25,7 @@ Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Col
 This plugin began as a [support forum thread](http://support.advancedcustomfields.com/discussion/comment/16239) on the ACF site.
 
 Sponsors:
+
 * [Angie Meeker Designs](http://angiemeekerdesigns.com/) — Single Row Collapsing Development
 
 Other contributors:
@@ -69,7 +70,7 @@ With the addition of the ability to collapse single rows, the button now is alwa
 * [Tweak] Clarified button text and added icons to buttons for improved UI
 * [Fix] Fixed errant closing tag on <button> element
 * Thank you to [Angie Meeker Designs](http://angiemeekerdesigns.com/) for sponsoring this update's new individual row collapsing feature!
-* Thank you to [@61pixels](http://profiles.wordpress.org/61pixels) and [@lagdonkey](http://profiles.wordpress.org/lagdonkey) for bug reports during development.
+* Thank you to @61pixels and @lagdonkey for bug reports during development.
 
 = 1.2.0 (22 Apr 2014) =
 * [New] Support for nexted repeater and flexible field content. (Thanks to @philiphetue)
