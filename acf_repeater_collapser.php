@@ -3,13 +3,14 @@
  * Plugin Name: Advanced Custom Fields Repeater Collapser
  * Plugin URI: https://github.com/mrwweb/ACF-Repeater-Collapser
  * Description: Provides a way to collapse and expand repeater field instances in order to enable better sorting.
- * Version: 1.2.0
+ * Version: 1.3.0-beta2
  * Author: Mark Root-Wiley
  * Author URI: http://mrwweb.com
  */
 
 /* Load the javascript and CSS files on the ACF admin pages */
-add_action( 'acf/input/admin_enqueue_scripts', 'acf_repeater_collapser_assets' );
+// 11 helps take precedence over core styles
+add_action( 'acf/input/admin_enqueue_scripts', 'acf_repeater_collapser_assets', 11 );
 function acf_repeater_collapser_assets() {
 	wp_enqueue_script(
 		'acf_repeater_collapser_admin_js',

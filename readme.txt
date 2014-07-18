@@ -24,6 +24,10 @@ Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Col
 
 This plugin began as a [support forum thread](http://support.advancedcustomfields.com/discussion/comment/16239) on the ACF site.
 
+Sponsors:
+
+* [Angie Meeker Designs](http://angiemeekerdesigns.com/) — Single Row Collapsing Development
+
 Other contributors:
 
 * [brasofilo](http://profiles.wordpress.org/brasofilo/)
@@ -41,7 +45,10 @@ To help identify each repeater field group when collapsed, the first field of ea
 As a work around, use a short field (like a text field or dropdown) as the first row in a repeatable fieldset.
 
 = Can I collapse individual rows? =
-This is the most-requested feature. Consider submitting a pull request [on GitHub](https://github.com/mrwweb/ACF-Repeater-Collapser) or sponsoring that update. ([Contact me](http://mrwweb.com/contact/) if you're interested in sponsoring the feature development.)
+Now you can, as of version 1.3.0.
+
+= What exactly is the "Collapse All Rows" button behavior =
+With the addition of the ability to collapse single rows, the button now is always in "Collapse" mode unless all rows are collapsed. Then it's "Expand."
 
 == Installation ==
 
@@ -52,11 +59,21 @@ This is the most-requested feature. Consider submitting a pull request [on GitHu
 == Screenshots ==
 
 1. Even with a few fields per repeater instance, it becomes unwieldy to sort.
-2. This plugins creates a new Collapse/Expand button.
-3. When collapsed, only the first field for each repeated fieldset is shown.
-4. Now it's easy to click-and-drag to change the field order.
+2. This plugin collapses all but the rows first field for easy sorting. (Only "Row Layout" fields are supported.)
+3. Once collapsed, easily reorder your rows!
+4. The plugin supports nested repeaters.
+5. Flexible fields too!
+6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
+= 1.3.0 (18 Jul 2014) =
+* [New] Ability to collapse single fields
+* [New] Added aria-expanded / aria-controls attributes on rows for improved accessibility
+* [Tweak] Clarified button text and added icons to buttons for improved UI
+* [Fix] Fixed errant closing tag on <button> element
+* Thank you to [Angie Meeker Designs](http://angiemeekerdesigns.com/) for sponsoring this update's new individual row collapsing feature!
+* Thank you to @61pixels and @lagdonkey for bug reports during development.
+
 = 1.2.0 (22 Apr 2014) =
 * [New] Support for nexted repeater and flexible field content. (Thanks to @philiphetue)
 * Use <button> element in admin for cleaner markup
@@ -75,6 +92,9 @@ This is the most-requested feature. Consider submitting a pull request [on GitHu
 * Initial commit. Submitted to plugin repository.
 
 == Upgrade Notice ==
+= 1.3.0 =
+New support for collapsing individual rows!
+
 = 1.1.0 =
 Support for "Flexible Content Fields" add-on thanks to @weskoop.
 
