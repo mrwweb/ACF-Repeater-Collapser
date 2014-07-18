@@ -3,7 +3,7 @@
  * Plugin Name: Advanced Custom Fields Repeater Collapser
  * Plugin URI: https://github.com/mrwweb/ACF-Repeater-Collapser
  * Description: Provides a way to collapse and expand repeater field instances in order to enable better sorting.
- * Version: 1.3.0-beta2
+ * Version: 1.3.0
  * Author: Mark Root-Wiley
  * Author URI: http://mrwweb.com
  */
