@@ -18,7 +18,7 @@ Both add-ons make "ACF" much more powerful, but if you have more than few fields
 
 *To help identify each repeater field group when collapsed, the first field of each repeated field group is shown. See the screenshots for an example.*
 
-**What individually collapsible repeater fields? Sponsor an update!** [Contact me](http://mrwweb.com/contact/) about sponsoring this feature if you're interested.
+**Want support for the table layout? Sponsor an update!** [Contact me](http://mrwweb.com/contact/) about sponsoring this feature if you're interested.
 
 Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Collapser).
 
