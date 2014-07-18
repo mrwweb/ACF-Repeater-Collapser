@@ -24,6 +24,9 @@ Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Col
 
 This plugin began as a [support forum thread](http://support.advancedcustomfields.com/discussion/comment/16239) on the ACF site.
 
+Sponsors:
+* [Angie Meeker Designs](http://angiemeekerdesigns.com/) — Single Row Collapsing Development
+
 Other contributors:
 
 * [brasofilo](http://profiles.wordpress.org/brasofilo/)
@@ -60,12 +63,13 @@ With the addition of the ability to collapse single rows, the button now is alwa
 4. Now it's easy to click-and-drag to change the field order.
 
 == Changelog ==
-= 1.3.0 (DATE) =
+= 1.3.0 (18 Jul 2014) =
 * [New] Ability to collapse single fields
-* Clarified button text and added icons to buttons for improved UI
-* Fixed errant closing tag on <button> element
-* Added aria-expanded / aria-controls attributes on rows for improved accessibility
-* Thank you to NAME/LINK for sponsoring this update!
+* [New] Added aria-expanded / aria-controls attributes on rows for improved accessibility
+* [Tweak] Clarified button text and added icons to buttons for improved UI
+* [Fix] Fixed errant closing tag on <button> element
+* Thank you to [Angie Meeker Designs](http://angiemeekerdesigns.com/) for sponsoring this update's new individual row collapsing feature!
+* Thank you to [@61pixels](http://profiles.wordpress.org/61pixels) and [@lagdonkey](http://profiles.wordpress.org/lagdonkey) for bug reports during development.
 
 = 1.2.0 (22 Apr 2014) =
 * [New] Support for nexted repeater and flexible field content. (Thanks to @philiphetue)
@@ -86,7 +90,7 @@ With the addition of the ability to collapse single rows, the button now is alwa
 
 == Upgrade Notice ==
 = 1.3.0 =
-New support for collapsing individual rows.
+New support for collapsing individual rows!
 
 = 1.1.0 =
 Support for "Flexible Content Fields" add-on thanks to @weskoop.
