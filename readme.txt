@@ -59,9 +59,11 @@ With the addition of the ability to collapse single rows, the button now is alwa
 == Screenshots ==
 
 1. Even with a few fields per repeater instance, it becomes unwieldy to sort.
-2. This plugins creates a new Collapse/Expand button.
-3. When collapsed, only the first field for each repeated fieldset is shown.
-4. Now it's easy to click-and-drag to change the field order.
+2. This plugin collapses all but the rows first field for easy sorting. (Only "Row Layout" fields are supported.)
+3. Once collapsed, easily reorder your rows!
+4. The plugin supports nested repeaters.
+5. Flexible fields too!
+6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
 = 1.3.0 (18 Jul 2014) =
