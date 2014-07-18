@@ -4,17 +4,21 @@ jQuery(document).ready(function($) {
 	 * Collapse a row or rows
 	 */
 	function acfRepeaterCollapseRow( $rows ) {
+		$rowButtonText = $('.screen-reader-text', $rows);
 		$rows.addClass('collapsed-row')
 			.data('acf-row-collapsed', true)
 			.attr('aria-expanded', false);
+		$rowButtonText.text('Expand Row')
 	}
 	/**
 	 * Expand a row or rows
 	 */
 	function acfRepeaterExpandRow( $rows ) {
+		$rowButtonText = $('.screen-reader-text', $rows);
 		$rows.removeClass('collapsed-row')
 			.data('acf-row-collapsed', false)
 			.attr('aria-expanded', true);
+			$rowButtonText.text('Collapse Row');
 	}
 
 	/**
@@ -84,10 +88,8 @@ jQuery(document).ready(function($) {
 	    // toggle the row state and button text
 	    if( true !== $row.data('acf-row-collapsed') ) {
 	    	acfRepeaterCollapseRow( $row );
-	    	$rowButtonText.text('Expand Row');
 	    } else {
 	    	acfRepeaterExpandRow( $row );
-	    	$rowButtonText.text('Collapse Row');
 	    }
 
 		if( true === acfRepeaterAllCollapsed( $rowsetWrapper ) ) {
