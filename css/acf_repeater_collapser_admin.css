@@ -58,20 +58,28 @@
   clear: both;
 }
 
-.collapsed-repeater .acf_input {
+.collapsed-repeater .acf_input,
+.acf-row.collapsed-row .acf-table,
+.layout.collapsed-row .acf-table{
 	position: relative;
 }
 
-.collapsed-row .acf_input-wrap tr {
+.collapsed-row .acf_input-wrap tr,
+.collapsed-row .acf-table tr,
+.layout.collapsed-row .acf-table .row-layout {
 	display: none;
 }
 
-.collapsed-row .acf_input-wrap tr:first-child {
+.collapsed-row .acf_input-wrap tr:first-child,
+.collapsed-row .acf-table tr:first-child,
+.layout.collapsed-row .acf-table .row-layout:first-child {
 	display: table-row;
 }
 
 /* "Masks" the first field in order to prevent clicking on it */
-.collapsed-row  .acf_input-wrap tr::after {
+.collapsed-row  .acf_input-wrap tr::after,
+.collapsed-row .acf-table tr::after,
+.layout.collapsed-row .acf-table .row-layout::after {
 	position: absolute;
 	top: 0; bottom: 0; left: 0px; right: 0;
 	display: block;
