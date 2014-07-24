@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
 			$repeater = $(this);
 
 			// only use this on row layout
-			if( $( '.acf-input-table', $repeater ).hasClass('row_layout') ) {
+			if( $( '.acf-input-table', $repeater ).hasClass('row_layout') || $( '.acf-input-table', $repeater ).hasClass('row-layout') ) {
 				$repeater.data('acf-rowset-collapsed', false).attr('aria-expanded', false);
 
 				// first: nested, second: parent
@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
 		// iterator for adding IDs/aria-controls attributes to repeater buttons
 		i = 1;
 		// append single repeater collapse to each row of repeater field
-		$('.field_type-repeater .row_layout .row,.field_type-repeater .row_layout .row-clone').each( function() {
+		$('.field_type-repeater .row_layout .row,.field_type-repeater .row_layout .row-clone, .field_type-repeater .row-layout .acf-row,.field_type-repeater .row-layout .row-clone').each( function() {
 			id = 'acf-repeater-' + i;
 			i++;
 
@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
 
 		// append single repeater collapse to flex fields
 		$('.field_type-flexible_content .layout').each( function() {
-			if( $('.acf-input-table', $(this)).hasClass('row_layout') ) {
+			if( $('.acf-input-table', $(this)).hasClass('row_layout') || $('.acf-input-table', $(this)).hasClass('row-layout') ) {
 				id = 'acf-repeater-' + i;
 				i++;
 				
@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
 			'.field-repeater-toggle-all',
 			acfRepeaterToggleAll
 		);
-		$( '.field_type-repeater .row_layout,.field_type-flexible_content' ).on(
+		$( '.field_type-repeater .row_layout,.field_type-repeater .row-layout,.field_type-flexible_content' ).on(
 			'click',
 			'.field-repeater-toggle-single',
 			acfRepeaterToggleSingle
