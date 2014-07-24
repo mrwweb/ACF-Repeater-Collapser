@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
 						.prepend( $collapseAllButton )
 						.data('acf-rowset-collapsed', false)
 						.data('acf-repeater-nested', true);
-					$('.row,.row-clone', $repeater ).data('acf-repeater-nested', true);
+					$('.row,.acf-row,.row-clone', $repeater ).data('acf-repeater-nested', true);
 				} else {
 					$repeater.prepend( $collapseAllButton )
 						.data('acf-rowset-collapsed', false);
@@ -138,9 +138,9 @@ jQuery(document).ready(function($) {
 
 		// select either nested or unnested repeater rows, not both
 		if( true === $rowsetWrapper.data('acf-repeater-nested') ) {
-			$rows = $('.row:data(acf-repeater-nested),.layout', $rowsetWrapper);
+			$rows = $('.row:data(acf-repeater-nested),.acf-row:data(acf-repeater-nested),.layout', $rowsetWrapper);
 		} else {
-			$rows = $('.row,.layout', $rowsetWrapper).not(':data(acf-repeater-nested)');
+			$rows = $('.row,.acf-row,.layout', $rowsetWrapper).not(':data(acf-repeater-nested)');
 		}
 	    
 	    // toggle repeater state and all rows
@@ -162,7 +162,9 @@ jQuery(document).ready(function($) {
 	function acfRepeaterToggleSingle() {
 		$rowButton = $(this);
 		$rowButtonText = $('.screen-reader-text', $rowButton);
-		$row = $rowButton.closest('.row,.layout');
+		$row = $rowButton.closest('.row,.acf-row,.layout');
+
+		console.log($row);
 
 		// select either parent repeater field wrapper
 		if( true === $row.data('acf-repeater-nested') ) {
@@ -196,9 +198,9 @@ jQuery(document).ready(function($) {
 	function acfRepeaterAllCollapsed( $rowsetWrapper ) {
 		// select either nested or unnested repeater rows, not both
 		if( true === $rowsetWrapper.data('acf-repeater-nested') ) {
-			$rows = $('.row:data(acf-repeater-nested),.layout:data(acf-repeater-nested)', $rowsetWrapper);
+			$rows = $('.row:data(acf-repeater-nested),.acf-row:data(acf-repeater-nested),.layout:data(acf-repeater-nested)', $rowsetWrapper);
 		} else {
-			$rows = $('.row,.values .layout', $rowsetWrapper).not(':data(acf-repeater-nested)');
+			$rows = $('.row,.acf-row,.values .layout', $rowsetWrapper).not(':data(acf-repeater-nested)');
 		}
 		
 		// store every row collapsed state in an array
