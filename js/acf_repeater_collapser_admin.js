@@ -164,8 +164,6 @@ jQuery(document).ready(function($) {
 		$rowButtonText = $('.screen-reader-text', $rowButton);
 		$row = $rowButton.closest('.row,.acf-row,.layout');
 
-		console.log($row);
-
 		// select either parent repeater field wrapper
 		if( true === $row.data('acf-repeater-nested') ) {
 			$rowsetWrapper = $row.closest( '.inner' );
