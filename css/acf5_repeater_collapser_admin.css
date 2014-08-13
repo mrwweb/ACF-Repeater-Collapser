@@ -1,0 +1,84 @@
+/* Expand / Collapse Buttons */
+.field-repeater-toggle-all {
+	float:right;
+	margin: -5px 0 15px !important;
+}
+
+.button.field-repeater-toggle-single {
+	padding: 1px 1px 0 1px;
+}
+.layout .field-repeater-toggle-single {
+	margin: 0 5px 0 -5px;
+}
+.repeater-button-cell {
+	background: #f9f9f9 !important;
+	padding: 0 !important;
+	vertical-align: middle !important;
+	text-align: center !important;
+	border-right-color: #e1e1e1 !important;
+	width: 30px !important;
+	/* Sorry 'bout the !importants. They are gross. Sadly, so are the ACF selectors I have to battle. */
+}
+
+.field_type-flexible_content .layout {
+	padding-left: 30px;
+	background: transparent;
+}
+
+.field_type-flexible_content .field-repeater-toggle-single {
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	left: 5px;
+}
+
+.field_type-flexible_content .acf-fc-layout-handle {
+	background: #fff;
+}
+
+.field-repeater-toggle::before {
+	content: "\f506";
+	display: inline;
+	-webkit-font-smoothing: antialiased;
+	font: normal 20px/1 'dashicons';
+	vertical-align: text-bottom;
+	color: #777;
+}
+.field-repeater-toggle-all::before {
+	margin: 3px 5px 0 0;
+}
+
+.collapsed-repeater .field-repeater-toggle-all::before,
+.collapsed-row .field-repeater-toggle-single::before {
+	content: "\f211";
+}
+
+.acf_flexible_content,
+.repeater {
+  clear: both;
+}
+
+.collapsed-repeater .acf_input {
+	position: relative;
+}
+
+.collapsed-row .acf_input-wrap tr {
+	display: none;
+}
+
+.collapsed-row .acf_input-wrap tr:first-child {
+	display: table-row;
+}
+
+/* "Masks" the first field in order to prevent clicking on it */
+.collapsed-row  .acf_input-wrap tr::after {
+	position: absolute;
+	top: 0; bottom: 0; left: 0px; right: 0;
+	display: block;
+	content: ' ';
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba( 244, 244, 244, .2 )), to(rgba( 244, 244, 244, 1 )));
+	background: -o-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
+	background: -moz-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
+	background: -webkit-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
+	background: linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
+}
