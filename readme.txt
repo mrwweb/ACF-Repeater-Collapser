@@ -12,27 +12,35 @@ Easier sorting for large repeated fields in the Advanced Custom Fields plugin.
 
 == Description ==
 
-**This plugin requires both the [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) plugin (version 4.0+ only) *AND* one or both of the [Repeater Field](http://www.advancedcustomfields.com/add-ons/repeater-field/) or [Flexible Content Field](http://www.advancedcustomfields.com/add-ons/flexible-content-field/) paid add-ons (or the PRO plugin for ACF 5.0+).**
+The Repeater and Flexible Content Field features make ACF really powerful, but if you have more than a few fields with either, they becomes unwieldy to sort. This plugin collapses each instance of the repeated fields—**only for the "Row"/"Block" layout**—to allow for easy sorting.
 
-Both add-ons make "ACF" much more powerful, but if you have more than few fields in either, it becomes unwieldy to sort. This plugin collapses each instance of the repeated fields—only for the "Row" layout with the Repeater Field—to allow for easy sorting.
-
-*To help identify each repeater field group when collapsed, the first field of each repeated field group is shown. See the screenshots for an example.*
+*To help identify each repeater field group when collapsed, the first field of each repeated field group is shown. See the [screenshots](http://wordpress.org/plugins/advanced-custom-field-repeater-collapser/screenshots/) for an example.*
 
 **Want support for the table layout? Sponsor an update!** [Contact me](http://mrwweb.com/contact/) about sponsoring this feature if you're interested.
 
+`=========================================`
+
+**Requirements:**
+
+* [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) 4.X *AND* one or both of the [Repeater Field](http://www.advancedcustomfields.com/add-ons/repeater-field/) or [Flexible Content Field](http://www.advancedcustomfields.com/add-ons/flexible-content-field/) paid add-ons
+* ACF 5.X PRO
+* Both ACF 4.X and ACF 5.X: Use the **Row/Block Layout**
+
+`=========================================`
+
 Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Collapser).
 
-This plugin began as a [support forum thread](http://support.advancedcustomfields.com/discussion/comment/16239) on the ACF site.
-
-Sponsors:
+**Sponsors:**
 
 * [Angie Meeker Designs](http://angiemeekerdesigns.com/) — Single Row Collapsing Development
 
-Other contributors:
+**Other contributors:**
 
 * [brasofilo](http://profiles.wordpress.org/brasofilo/)
 * [weskoop](http://profiles.wordpress.org/weskoop/)
 * [philiphetue](https://github.com/philiphetue)
+
+This plugin began as a [support forum thread](http://support.advancedcustomfields.com/discussion/comment/16239) on the ACF site.
 
 == Frequently Asked Questions ==
 
@@ -66,8 +74,13 @@ With the addition of the ability to collapse single rows, the button now is alwa
 6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
+= 1.4.0 (XX Aug 2014) =
+* [New] **ACF5 Support**
+* [Fix] aria-controls attribute fix
+* Note: The plugin supports both ACF4 and ACF5; however, all future feature improvements will only be made for ACF 5.X.
+
 = 1.3.0 (18 Jul 2014) =
-* [New] Ability to collapse single fields
+* [New] **Ability to collapse single fields**
 * [New] Added aria-expanded / aria-controls attributes on rows for improved accessibility
 * [Tweak] Clarified button text and added icons to buttons for improved UI
 * [Fix] Fixed errant closing tag on <button> element
@@ -75,23 +88,26 @@ With the addition of the ability to collapse single rows, the button now is alwa
 * Thank you to @61pixels and @lagdonkey for bug reports during development.
 
 = 1.2.0 (22 Apr 2014) =
-* [New] Support for nexted repeater and flexible field content. (Thanks to @philiphetue)
+* [New] Support for nested repeater and flexible field content. (Thanks to @philiphetue)
 * Use <button> element in admin for cleaner markup
 * Update "Tested up To" to 3.9
 
-= 1.1.0 =
+= 1.1.0 (11 Apr 2013) =
 * [New] Support for "Flexible Content Fields" add-on thanks to @weskoop.
 
-= 1.0.2 =
+= 1.0.2 (9 Apr 2013)  =
 * Fixed missing semicolon. Presumably source of update issue.
 
-= 1.0.1 =
+= 1.0.1 (9 Apr 2013)  =
 * Fixed mismatched filenames.
 
-= 1.0 =
+= 1.0 (8 Apr 2013) =
 * Initial commit. Submitted to plugin repository.
 
 == Upgrade Notice ==
+= 1.4.0 =
+ACF5 support is here!
+
 = 1.3.0 =
 New support for collapsing individual rows!
 
