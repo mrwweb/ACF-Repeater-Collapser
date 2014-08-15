@@ -37,7 +37,6 @@ jQuery(document).ready(function($) {
 		// append single repeater collapse to each row of repeater field
 		$('.field_type-repeater .row_layout .row,.field_type-repeater .row_layout .row-clone').each( function() {
 			id = 'acf-repeater-' + i;
-			i++;
 
 			$(this).prepend( $collapseSingleButtonTable )
 				.data('acf-row-collapsed', false).attr('aria-expanded', true)
@@ -45,6 +44,8 @@ jQuery(document).ready(function($) {
 				.attr('aria-live','off');
 			$('.field-repeater-toggle-single', $(this)).first()
 				.attr('aria-controls',id);
+			
+			i++;
 		});
 
 		// append single repeater collapse to flex fields
