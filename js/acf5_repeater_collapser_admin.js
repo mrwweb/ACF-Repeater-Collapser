@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
 
 				// first: nested, second: parent
 				if( $repeater.is( 'tr' ) ) {
-					$( '.acf-repeater', $repeater ).prepend( $collapseAllButton );
+					$( '.acf-repeater', $repeater ).first().prepend( $collapseAllButton );
 					$repeater
 						.data('acf-rowset-collapsed', false)
 						.data('acf-repeater-nested', true);
@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
 		// iterator for adding IDs/aria-controls attributes to repeater buttons
 		i = 1;
 		// append single repeater collapse to each row of repeater field
-		$('.field_type-repeater .row-layout .acf-row,.field_type-repeater .row-layout .acf-row.clone').each( function() {
+		$('.field_type-repeater .row-layout > tbody > .acf-row,.field_type-repeater > tbody > .row-layout .acf-row.clone').each( function() {
 			id = 'acf-repeater-' + i;
 
 			$(this).prepend( $collapseSingleButtonTable )
