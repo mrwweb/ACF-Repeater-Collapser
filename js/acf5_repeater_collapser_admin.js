@@ -190,7 +190,6 @@ jQuery(document).ready(function($) {
 	 */
 	function acfRepeaterAllCollapsed( $rowsetWrapper ) {
 		// select either nested or unnested repeater rows, not both
-		console.log($rowsetWrapper);
 		if( true === $rowsetWrapper.data('acf-repeater-nested') ) {
 			$rows = $('.acf-row:data(acf-repeater-nested),.layout:data(acf-repeater-nested)', $rowsetWrapper).not('.clone');
 		} else {
@@ -202,7 +201,6 @@ jQuery(document).ready(function($) {
 		$rows.each( function() {
 			rowStates.push( $(this).data('acf-row-collapsed') );
 		});
-		console.log(rowStates);
 
 		// check if any rows are expanded
 		allCollapsed = 0 > $.inArray( false, rowStates );
