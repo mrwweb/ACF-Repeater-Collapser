@@ -18,7 +18,7 @@ The Repeater and Flexible Content Field features make ACF really powerful, but i
 
 **Want support for the table layout? Sponsor an update!** [Contact me](http://mrwweb.com/contact/) about sponsoring this feature if you're interested.
 
-`=========================================`
+------------------------------------------------
 
 **Requirements:**
 
@@ -26,7 +26,7 @@ The Repeater and Flexible Content Field features make ACF really powerful, but i
 * ACF 5.X PRO
 * Both ACF 4.X and ACF 5.X: Use the **Row/Block Layout**
 
-`=========================================`
+------------------------------------------------
 
 Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Collapser).
 
