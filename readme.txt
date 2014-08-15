@@ -45,12 +45,12 @@ This plugin began as a [support forum thread](http://support.advancedcustomfield
 == Frequently Asked Questions ==
 
 = Where is the "Collapse Rows" button? I don't see it. =
-The plugin only supports the "Row" layout for repeaters.
+The plugin only supports the "Row" layout ("Block" Layout in ACF 5) for repeaters.
 
 = Why don't rows collapse? / Why is the row only grayed out? =
 To help identify each repeater field group when collapsed, the first field of each repeated field group is shown. See the screenshots for an example.
 
-As a work around, use a short field (like a text field or dropdown) as the first row in a repeatable fieldset.
+When possible, use a short field (like a text field or dropdown) as the first row in a repeatable fieldset.
 
 = Can I collapse individual rows? =
 Now you can, as of version 1.3.0.
@@ -74,10 +74,11 @@ With the addition of the ability to collapse single rows, the button now is alwa
 6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
-= 1.4.0 (XX Aug 2014) =
+= 1.4.0 (15 Aug 2014) =
 * [New] **ACF5 Support**
 * [Fix] aria-controls attribute fix
 * Note: The plugin supports both ACF4 and ACF5; however, all future feature improvements will only be made for ACF 5.X.
+* Did this plugin save you some time or help build a site for a client? [Buy me a beverage!](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=HH4FKZHK75MTN&lc=US&item_name=MRW%20Web%20Design%20%2f%20Mark%20Root%2dWiley&item_number=Buy%20Me%20a%20Beverage%21%20%2d%20ACF%20Repeater%20Collapser&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted).
 
 = 1.3.0 (18 Jul 2014) =
 * [New] **Ability to collapse single fields**
