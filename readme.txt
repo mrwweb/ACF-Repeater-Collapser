@@ -3,7 +3,7 @@ Contributors: mrwweb
 Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.0
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
-Tested up to: 4.0-beta3
+Tested up to: 4.0
 Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
