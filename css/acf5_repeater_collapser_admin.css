@@ -24,7 +24,7 @@
 	position: relative;
 }
 
-.field_type-flexible_content .layout {
+.field_type-flexible_content .layout.row-layout {
 	padding-left: 30px;
 	background: transparent;
 }
