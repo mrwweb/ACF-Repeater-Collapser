@@ -4,7 +4,7 @@ Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.0
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
 Tested up to: 4.0
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,11 @@ With the addition of the ability to collapse single rows, the button now is alwa
 6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
+= 1.4.1 (19 Nov 2014) =
+* [Fix] Pass `event` to collapsing JS functions to prevent Firefox errors.
+* [Fix] No margin on table-layout fields (ACF5 only)
+* A big thanks to [@tmconnect](https://github.com/tmconnect) for the pull requests that made up this release.
+
 = 1.4.0 (15 Aug 2014) =
 * [New] **ACF5 Support**
 * [Fix] aria-controls attribute fix

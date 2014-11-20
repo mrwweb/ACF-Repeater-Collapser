@@ -133,7 +133,7 @@ jQuery(document).ready(function($) {
 	/**
 	 * toggles set of repeater rows or flexible fields
 	 */
-	function acfRepeaterToggleAll() {
+	function acfRepeaterToggleAll( event ) {
 		$rowsetButton = $(this);
 		$rowsetWrapper = $(this).parent();
 
@@ -160,7 +160,7 @@ jQuery(document).ready(function($) {
 	/**
 	 * toggles single repeater row or flexible field
 	 */
-	function acfRepeaterToggleSingle() {
+	function acfRepeaterToggleSingle( event ) {
 		$rowButton = $(this);
 		$rowButtonText = $('.screen-reader-text', $rowButton);
 		$row = $rowButton.closest('.row,.layout');
