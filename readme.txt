@@ -1,9 +1,9 @@
-=== Advanced Custom Fields Repeater & Flexible Content Fields Collapser ===
+﻿=== Advanced Custom Fields Repeater & Flexible Content Fields Collapser ===
 Contributors: mrwweb
 Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.0
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Easier sorting for large repeated fields in the Advanced Custom Fields plugin.
 
 == Description ==
 
-The Repeater and Flexible Content Field features make ACF really powerful, but if you have more than a few fields with either, they becomes unwieldy to sort. This plugin collapses each instance of the repeated fields—**only for the "Row"/"Block" layout**—to allow for easy sorting.
+The Repeater and Flexible Content Field features make ACF really powerful, but if you have more than a few fields with either, they becomes unwieldy to sort. This plugin collapses each instance of the repeated fields—**only for the "Row" layout**—to allow for easy sorting.
 
 *To help identify each repeater field group when collapsed, the first field of each repeated field group is shown. See the [screenshots](http://wordpress.org/plugins/advanced-custom-field-repeater-collapser/screenshots/) for an example.*
 
@@ -24,7 +24,7 @@ The Repeater and Flexible Content Field features make ACF really powerful, but i
 
 * [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) 4.X *AND* one or both of the [Repeater Field](http://www.advancedcustomfields.com/add-ons/repeater-field/) or [Flexible Content Field](http://www.advancedcustomfields.com/add-ons/flexible-content-field/) paid add-ons
 * ACF 5.X PRO
-* Both ACF 4.X and ACF 5.X: Use the **Row/Block Layout**
+* Both ACF 4.X and ACF 5.X: Use the **Row Layout**
 
 ------------------------------------------------
 
@@ -45,7 +45,7 @@ This plugin began as a [support forum thread](http://support.advancedcustomfield
 == Frequently Asked Questions ==
 
 = Where is the "Collapse Rows" button? I don't see it. =
-The plugin only supports the "Row" layout ("Block" Layout in ACF 5) for repeaters.
+The plugin only supports the "Row" layout for repeaters.
 
 = Why don't rows collapse? / Why is the row only grayed out? =
 To help identify each repeater field group when collapsed, the first field of each repeated field group is shown. See the screenshots for an example.
