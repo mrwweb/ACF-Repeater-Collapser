@@ -31,7 +31,7 @@ function acf_repeater_collapser_assets() {
 	);
 	wp_enqueue_style(
 		'acf_repeater_collapser_admin_css',
-		esc_url( "{$uri}}css/{$prefix}_repeater_collapser_admin.css" ),
+		esc_url( "{$uri}css/{$prefix}_repeater_collapser_admin.css" ),
 		false,
 		$version
 	);
