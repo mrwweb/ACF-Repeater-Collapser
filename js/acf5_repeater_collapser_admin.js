@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 		$collapseSingleButton = '<button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-single"><span class="screen-reader-text">Collapse Row</span></button>';
 
 		// find each repeater & flexible instance, add the button if the field uses the row layout
-		$('.field_type-repeater, .field_type-flexible_content').each( function() {
+		$('.field_type-repeater, .field_type-flexible_content, .acf-field-repeater, .acf-field-flexible-content').each( function() {
 			$repeater = $(this);
 
 			// only use this on row layout
@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
 		// iterator for adding IDs/aria-controls attributes to repeater buttons
 		i = 1;
 		// append single repeater collapse to each row of repeater field
-		$('.field_type-repeater .row-layout > tbody > .acf-row,.field_type-repeater > tbody > .row-layout .acf-row.clone').each( function() {
+		$('.field_type-repeater .row-layout > tbody > .acf-row, .field_type-repeater > tbody > .row-layout .acf-row.clone, .acf-field-repeater .row-layout > tbody > .acf-row, .acf-field-repeater > tbody > .row-layout .acf-row.clone').each( function() {
 			id = 'acf-repeater-' + i;
 
 			$(this).prepend( $collapseSingleButtonTable )
@@ -50,7 +50,7 @@ jQuery(document).ready(function($) {
 		});
 
 		// append single repeater collapse to flex fields
-		$('.field_type-flexible_content .layout').each( function() {
+		$('.field_type-flexible_content .layout, .acf-field-flexible-content .layout').each( function() {
 			if( $('.acf-input-table', $(this)).hasClass('row-layout') ) {
 				id = 'acf-repeater-' + i;
 				i++;
@@ -68,19 +68,19 @@ jQuery(document).ready(function($) {
 
 		// Bind click events to the toggle functions
 		// delegated to higher DOM element to handle dynamically added repeaters
-		$( '.field_type-repeater, .field_type-flexible_content' ).on(
+		$( '.field_type-repeater, .field_type-flexible_content, .acf-field-repeater, .acf-field-flexible-content' ).on(
 			'click',
 			'.field-repeater-toggle-all',
 			acfRepeaterToggleAll
 		);
-		$( '.field_type-repeater .row-layout,.field_type-flexible_content' ).on(
+		$( '.field_type-repeater .row-layout, .field_type-flexible_content, .acf-field-repeater .row-layout, .acf-field-flexible-content' ).on(
 			'click',
 			'.field-repeater-toggle-single',
 			acfRepeaterToggleSingle
 		);
 
 		// prevent default flexible field collapsing for clarity
-		$('.field_type-flexible_content').on(
+		$('.field_type-flexible_content, .acf-field-flexible-content').on(
 			'click',
 			'.acf-fc-layout-handle',
 			false
