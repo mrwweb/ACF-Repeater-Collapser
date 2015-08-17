@@ -24,23 +24,23 @@
 	position: relative;
 }
 
-.field_type-flexible_content .layout.row-layout {
+.acf-field-flexible-content .layout.row-layout {
 	padding-left: 30px;
 	background: transparent;
 }
 
-.field_type-flexible_content .field-repeater-toggle-single {
+.acf-field-flexible-content .field-repeater-toggle-single {
 	position: absolute;
 	top: 50%;
 	margin-top: -15px;
 	left: 5px;
 }
 /* Weird positioning exception */
-.field_type-flexible_content .field_type-repeater .field-repeater-toggle-single {
+.acf-field-flexible-content .acf-field-repeater .field-repeater-toggle-single {
 	left: 8px;
 }
 
-.field_type-flexible_content .acf-fc-layout-handle {
+.acf-field-flexible-content .acf-fc-layout-handle {
 	background: #fff;
 }
 
