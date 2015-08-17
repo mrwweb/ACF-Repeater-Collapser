@@ -73,7 +73,7 @@ jQuery(document).ready(function($) {
 			'.field-repeater-toggle-all',
 			acfRepeaterToggleAll
 		);
-		$( '.field_type-repeater, .field_type-flexible_content, .acf-field-repeater, .acf-field-flexible-content' ).on(
+		$( '.field_type-repeater .row-layout, .field_type-flexible_content, .acf-field-repeater .row-layout, .acf-field-flexible-content' ).on(
 			'click',
 			'.field-repeater-toggle-single',
 			acfRepeaterToggleSingle
