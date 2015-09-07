@@ -75,8 +75,9 @@ With the addition of the ability to collapse single rows, the button now is alwa
 6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
-= 1.4.2 (7 Sep 2015) +
-* [Fix] Include [compatibility filter](http://www.advancedcustomfields.com/blog/acf-pro-5-2-7-update/) to fix in recent ACF5.X versions.
+= 1.4.2 (7 Sep 2015) =
+* [Fix] Include [compatibility filter](http://www.advancedcustomfields.com/blog/acf-pro-5-2-7-update/) to fix in ACF PRO since v5.2.7.
+* [Fix] Prevent fatal error if ACF is not activated.
 * [Misc] Code cleanup. Thanks to robneu on GitHub.
 
 = 1.4.1 (19 Nov 2014) =
