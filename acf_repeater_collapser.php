@@ -14,6 +14,10 @@ define( 'ACF_REPEATER_COLLAPSER_VERSION', '1.4.2' );
 // 11 helps take precedence over core styles
 add_action( 'acf/input/admin_enqueue_scripts', 'acf_repeater_collapser_assets', 11 );
 function acf_repeater_collapser_assets() {
+	if( ! class_exists( 'acf' ) ) {
+		return;
+	}
+
 	$acf_version = acf()->settings['version'];
 	if ( version_compare( $acf_version, '4.0', '<' ) ) {
 		return;
@@ -39,6 +43,10 @@ function acf_repeater_collapser_assets() {
 
 add_action( 'plugins_loaded', 'acf_repeater_collapser_acf5_compat' );
 function acf_repeater_collapser_acf5_compat() {
+	if( ! class_exists( 'acf' ) ) {
+		return;
+	}
+	
 	$acf_version = acf()->settings['version'];
 	if( version_compare( $acf_version, '5.0', '>=' ) ) {
 		add_filter( 'acf/compatibility/field_wrapper_class', '__return_true' );
