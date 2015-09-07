@@ -36,3 +36,11 @@ function acf_repeater_collapser_assets() {
 		$version
 	);
 }
+
+add_action( 'plugins_loaded', 'acf_repeater_collapser_acf5_compat' );
+function acf_repeater_collapser_acf5_compat() {
+	$acf_version = acf()->settings['version'];
+	if( version_compare( $acf_version, '5.0', '>=' ) ) {
+		add_filter( 'acf/compatibility/field_wrapper_class', '__return_true' );
+	}
+}
