@@ -3,8 +3,8 @@ Contributors: mrwweb
 Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.0
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
-Tested up to: 4.1
-Stable tag: 1.4.1
+Tested up to: 4.3
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,7 @@ Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Col
 * [brasofilo](http://profiles.wordpress.org/brasofilo/)
 * [weskoop](http://profiles.wordpress.org/weskoop/)
 * [philiphetue](https://github.com/philiphetue)
+* [robneu](https://github.com/robneu)
 
 This plugin began as a [support forum thread](http://support.advancedcustomfields.com/discussion/comment/16239) on the ACF site.
 
@@ -74,6 +75,10 @@ With the addition of the ability to collapse single rows, the button now is alwa
 6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
+= 1.4.2 (7 Sep 2015) +
+* [Fix] Include [compatibility filter](http://www.advancedcustomfields.com/blog/acf-pro-5-2-7-update/) to fix in recent ACF5.X versions.
+* [Misc] Code cleanup. Thanks to robneu on GitHub.
+
 = 1.4.1 (19 Nov 2014) =
 * [Fix] Pass `event` to collapsing JS functions to prevent Firefox errors.
 * [Fix] No margin on table-layout fields (ACF5 only)
@@ -111,6 +116,9 @@ With the addition of the ability to collapse single rows, the button now is alwa
 * Initial commit. Submitted to plugin repository.
 
 == Upgrade Notice ==
+= 1.4.2 =
+ACF5 Compability Fix. Code cleanup.
+
 = 1.4.0 =
 ACF5 support is here!
 
