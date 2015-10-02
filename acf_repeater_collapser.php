@@ -34,6 +34,13 @@ function acf_repeater_collapser_assets() {
 		array( 'jquery' ),
 		$version
 	);
+	wp_localize_script( 'acf_repeater_collapser_admin_js', 'acfrcL10n', array(
+		'collapseRows' => esc_html__( 'Collapse All Rows', 'advanced-custom-field-repeater-collapser' ),
+		'collapseRow' => esc_html__( 'Collapse Row', 'advanced-custom-field-repeater-collapser' ),
+		'expandRows' => esc_html__( 'Expand All Rows', 'advanced-custom-field-repeater-collapser' ),
+		'expandRow' => esc_html__( 'Expand Row', 'advanced-custom-field-repeater-collapser' ),
+	) );
+
 	wp_enqueue_style(
 		'acf_repeater_collapser_admin_css',
 		esc_url( "{$uri}css/{$prefix}_repeater_collapser_admin.css" ),

@@ -7,9 +7,9 @@ jQuery(document).ready(function($) {
 	function acfRepeaterCollapserInit() {
 		// HTML to put above each repeater instance
 		var i = 1,
-			$collapseAllButton = '<button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-all">Collapse All Rows</button>',
-			$collapseSingleButtonTable = '<td class="repeater-button-cell"><button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-single"><span class="screen-reader-text">Collapse Row</span></button></td>',
-			$collapseSingleButton = '<button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-single"><span class="screen-reader-text">Collapse Row</span></button>';
+			$collapseAllButton = '<button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-all">' + acfrcL10n.collapseRows + '</button>',
+			$collapseSingleButtonTable = '<td class="repeater-button-cell"><div class="repeater-button-cell-div"><button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-single"><span class="screen-reader-text">' + acfrcL10n.collapseRow + '</span></button></div></td>',
+			$collapseSingleButton = '<button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-single"><span class="screen-reader-text">' + acfrcL10n.collapseRow + '</span></button>';
 
 		// find each repeater & flexible instance, add the button if the field uses the row layout
 		$('.field_type-repeater, .field_type-flexible_content').each( function() {
@@ -93,7 +93,7 @@ jQuery(document).ready(function($) {
 		$rows.addClass('collapsed-row')
 			.data('acf-row-collapsed', true)
 			.attr('aria-expanded', false);
-		$rowButtonText.text('Expand Row');
+		$rowButtonText.text(acfrcL10n.expandRow);
 	}
 
 	/**
@@ -104,7 +104,7 @@ jQuery(document).ready(function($) {
 		$rows.removeClass('collapsed-row')
 			.data('acf-row-collapsed', false)
 			.attr('aria-expanded', true);
-		$rowButtonText.text('Collapse Row');
+		$rowButtonText.text(acfrcL10n.collapseRow);
 	}
 
 	/**
@@ -114,7 +114,7 @@ jQuery(document).ready(function($) {
 		var $button = $('.field-repeater-toggle-all', $wrapper).first();
 
 		$wrapper.removeClass('collapsed-repeater').data('acf-rowset-collapsed', false);
-		$button.text('Collapse All Rows');
+		$button.text(acfrcL10n.collapseRows);
 	}
 
 	/**
@@ -125,7 +125,7 @@ jQuery(document).ready(function($) {
 
 		$wrapper.addClass('collapsed-repeater')
 			.data('acf-rowset-collapsed', true);
-		$button.text('Expand All Rows');
+		$button.text(acfrcL10n.expandRows);
 	}
 
 	/**
