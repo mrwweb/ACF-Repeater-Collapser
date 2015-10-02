@@ -4,7 +4,7 @@ Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.0
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
 Tested up to: 4.3
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +75,10 @@ With the addition of the ability to collapse single rows, the button now is alwa
 6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
+= 1.4.3 (DATE) =
+* [Fix] Resolve plugin breaking following ACF PRO 5.3.1 markup changes. *I've contacted the ACF core author in hopes to preventing future problems like those that have broken this plugin twice in three months.*
+* [i18n] Add text-domain and make all strings translatable for upcoming translate.wordpress.org plugin migration
+
 = 1.4.2 (7 Sep 2015) =
 * [Fix] Include [compatibility filter](http://www.advancedcustomfields.com/blog/acf-pro-5-2-7-update/) to fix in ACF PRO since v5.2.7.
 * [Fix] Prevent fatal error if ACF is not activated.
@@ -117,6 +121,9 @@ With the addition of the ability to collapse single rows, the button now is alwa
 * Initial commit. Submitted to plugin repository.
 
 == Upgrade Notice ==
+= 1.4.3 =
+Fix after breaking in ACF PRO 5.3.1. Plugin now translatable.
+
 = 1.4.2 =
 ACF5 Compability Fix. Code cleanup.
 
