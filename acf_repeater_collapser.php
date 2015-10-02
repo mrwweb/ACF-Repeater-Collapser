@@ -6,6 +6,7 @@
  * Version:     1.4.2
  * Author:      Mark Root-Wiley
  * Author URI:  http://mrwweb.com
+ * Text Domain: advanced-custom-field-repeater-collapser
  */
 
 define( 'ACF_REPEATER_COLLAPSER_VERSION', '1.4.2' );
@@ -51,4 +52,12 @@ function acf_repeater_collapser_acf5_compat() {
 	if( version_compare( $acf_version, '5.0', '>=' ) ) {
 		add_filter( 'acf/compatibility/field_wrapper_class', '__return_true' );
 	}
+}
+
+/**
+ * load text domain
+ */
+add_action( 'plugins_loaded', 'acf_repeater_collapser_textdomain' );
+function fpw_textdomain() {
+	load_plugin_textdomain( 'fadvanced-custom-field-repeater-collapser' );
 }
