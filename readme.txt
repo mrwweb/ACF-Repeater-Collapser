@@ -1,4 +1,4 @@
-﻿=== Advanced Custom Fields Repeater & Flexible Content Fields Collapser ===
+﻿=== Advanced Custom Fields Repeater Collapser ===
 Contributors: mrwweb
 Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.0
