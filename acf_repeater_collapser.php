@@ -65,6 +65,6 @@ function acf_repeater_collapser_acf5_compat() {
  * load text domain
  */
 add_action( 'plugins_loaded', 'acf_repeater_collapser_textdomain' );
-function fpw_textdomain() {
-	load_plugin_textdomain( 'fadvanced-custom-field-repeater-collapser' );
+function acf_repeater_collapser_textdomain() {
+	load_plugin_textdomain( 'advanced-custom-field-repeater-collapser' );
 }
