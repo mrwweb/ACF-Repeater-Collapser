@@ -24,26 +24,7 @@
 	position: relative;
 }
 
-.field_type-flexible_content .layout.row-layout {
-	padding-left: 30px;
-	background: transparent;
-}
-
-.field_type-flexible_content .field-repeater-toggle-single {
-	position: absolute;
-	top: 50%;
-	margin-top: -15px;
-	left: 5px;
-}
 /* Weird positioning exception */
-.field_type-flexible_content .field_type-repeater .field-repeater-toggle-single {
-	left: 8px;
-}
-
-.field_type-flexible_content .acf-fc-layout-handle {
-	background: #fff;
-}
-
 .field-repeater-toggle::before {
 	content: "\f506";
 	display: inline;
@@ -61,7 +42,6 @@
 	content: "\f211";
 }
 
-.acf_flexible_content,
 .repeater {
   clear: both;
 }
