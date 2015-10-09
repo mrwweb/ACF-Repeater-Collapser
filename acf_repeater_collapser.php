@@ -11,6 +11,14 @@
 
 define( 'ACF_REPEATER_COLLAPSER_VERSION', '1.4.3' );
 
+/**
+ * load text domain
+ */
+add_action( 'plugins_loaded', 'acf_repeater_collapser_textdomain' );
+function acf_repeater_collapser_textdomain() {
+	load_plugin_textdomain( 'advanced-custom-field-repeater-collapser' );
+}
+
 /* Load the javascript and CSS files on the ACF admin pages */
 // 11 helps take precedence over core styles
 add_action( 'acf/input/admin_enqueue_scripts', 'acf_repeater_collapser_assets', 11 );
@@ -59,12 +67,4 @@ function acf_repeater_collapser_acf5_compat() {
 	if( version_compare( $acf_version, '5.0', '>=' ) ) {
 		add_filter( 'acf/compatibility/field_wrapper_class', '__return_true' );
 	}
-}
-
-/**
- * load text domain
- */
-add_action( 'plugins_loaded', 'acf_repeater_collapser_textdomain' );
-function acf_repeater_collapser_textdomain() {
-	load_plugin_textdomain( 'advanced-custom-field-repeater-collapser' );
 }
