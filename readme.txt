@@ -75,9 +75,9 @@ With the addition of the ability to collapse single rows, the button now is alwa
 6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
-= 1.4.3 (DATE) =
-* [Fix] Resolve plugin breaking following ACF PRO 5.3.1 markup changes. *I've contacted the ACF core author in hopes to preventing future problems like those that have broken this plugin twice in three months.*
-* [i18n] Add text-domain and make all strings translatable for upcoming translate.wordpress.org plugin migration
+= 1.4.3 (15 Oct 2015) =
+* THIS UPDATE DOES NOT FIX THE PLUGIN WITH ACF 5.3.1. IT IS PURELY FOR FUTURE TRANSLATION FEATURES REQUIRED BY THE PLUGIN REPOSITORY.
+* [i18n] Add text-domain and make all strings translatable for upcoming translate.wordpress.org plugin migration.
 
 = 1.4.2 (7 Sep 2015) =
 * [Fix] Include [compatibility filter](http://www.advancedcustomfields.com/blog/acf-pro-5-2-7-update/) to fix in ACF PRO since v5.2.7.
@@ -122,7 +122,7 @@ With the addition of the ability to collapse single rows, the button now is alwa
 
 == Upgrade Notice ==
 = 1.4.3 =
-Fix after breaking in ACF PRO 5.3.1. Plugin now translatable.
+THIS UPDATE DOES NOT FIX THE PLUGIN WITH ACF 5.3.1. IT IS PURELY FOR FUTURE TRANSLATION FEATURES REQUIRED BY THE PLUGIN REPOSITORY.
 
 = 1.4.2 =
 ACF5 Compability Fix. Code cleanup.

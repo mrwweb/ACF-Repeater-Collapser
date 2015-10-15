@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 			var $repeater = $(this);
 
 			// only use this on row layout
-			if( $( '.acf-input-table', $repeater ).hasClass('row-layout') ) {
+			if( $( '.acf-repeater', $repeater ).hasClass('-row') ) {
 				$repeater.find('.layout').addClass('row-layout');
 				$repeater.data('acf-rowset-collapsed', false).attr('aria-expanded', false);
 
