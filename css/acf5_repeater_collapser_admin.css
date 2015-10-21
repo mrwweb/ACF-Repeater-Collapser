@@ -29,12 +29,23 @@
 	background: transparent;
 }
 
+.acf-fields.-top .field_type-flexible_content .layout.row-layout {
+	padding-left: 0;
+	margin-left: 30px;
+}
+
 .field_type-flexible_content .field-repeater-toggle-single {
 	position: absolute;
 	top: 50%;
 	margin-top: -15px;
 	left: 5px;
 }
+.acf-fields.-top .field_type-flexible_content .field-repeater-toggle-single {
+	left: auto;
+	right: 100%;
+	margin-right: 4px;
+}
+
 /* Weird positioning exception */
 .field_type-flexible_content .field_type-repeater .field-repeater-toggle-single {
 	left: 8px;
@@ -70,7 +81,9 @@
 	position: relative;
 }
 
-.collapsed-row .acf-table tr {
+.collapsed-row .acf-table tr,
+.collapsed-row .acf-fields.-left .acf-field,
+.acf-fields.-top .collapsed-row .acf-fields .acf-field {
 	display: none;
 }
 
@@ -78,8 +91,15 @@
 	display: table-row;
 }
 
+.collapsed-row .acf-fields.-left .acf-field:first-child,
+.acf-fields.-top .collapsed-row .acf-fields .acf-field:first-child {
+	display: block;
+}
+
 /* "Masks" the first field in order to prevent clicking on it */
-.collapsed-row .acf-table tr::after {
+.collapsed-row .acf-table tr::after,
+.collapsed-row .acf-fields.-left .acf-field::after,
+.acf-fields.-top .collapsed-row .acf-fields .acf-field::after {
 	position: absolute;
 	top: 0; bottom: 0; left: 0px; right: 0;
 	display: block;
@@ -89,4 +109,10 @@
 	background: -moz-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
 	background: -webkit-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
 	background: linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
+}
+
+/* Clearfix */
+.collapsed-row .acf-fields.-left .acf-field,
+.acf-fields.-top .collapsed-row .acf-fields .acf-field {
+	overflow: hidden;
 }
