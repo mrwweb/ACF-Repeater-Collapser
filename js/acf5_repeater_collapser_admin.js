@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 			var $repeater = $(this);
 
 			// only use this on row layout
-			if( $( '.acf-repeater', $repeater ).hasClass('-row') ) {
+			if( $( '.acf-input-table.row-layout,.acf-repeater.-row .acf-table', $repeater).length ) {
 				$repeater.find('.layout').addClass('row-layout');
 				$repeater.data('acf-rowset-collapsed', false).attr('aria-expanded', false);
 
@@ -35,7 +35,9 @@ jQuery(document).ready(function($) {
 		});
 
 		// append single repeater collapse to each row of repeater field
-		$('.field_type-repeater .row-layout > tbody > .acf-row,.field_type-repeater > tbody > .row-layout .acf-row.clone').each( function() {
+		$('.field_type-repeater .row-layout > tbody > .acf-row,' +
+			'.field_type-repeater > tbody > .row-layout .acf-row.clone, ' +
+			'.field_type-repeater .acf-repeater.-row .acf-table > tbody > .acf-row').each( function() {
 			var id    = 'acf-repeater-' + i,
 				$that = $(this);
 
@@ -55,7 +57,7 @@ jQuery(document).ready(function($) {
 			var $that = $(this),
 				id;
 
-			if( $('.acf-input-table', $that).hasClass('row-layout') ) {
+			if( $('.acf-input-table.row-layout, > .acf-fields', $that).length ) {
 				id = 'acf-repeater-' + i;
 				i++;
 
@@ -76,7 +78,7 @@ jQuery(document).ready(function($) {
 			'.field-repeater-toggle-all',
 			acfRepeaterToggleAll
 		);
-		$( '.field_type-repeater .row-layout,.field_type-flexible_content' ).on(
+		$( '.field_type-repeater .row-layout,.field_type-repeater .acf-repeater.-row,.field_type-flexible_content' ).on(
 			'click',
 			'.field-repeater-toggle-single',
 			acfRepeaterToggleSingle
