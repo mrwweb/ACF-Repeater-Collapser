@@ -11,6 +11,10 @@ jQuery(document).ready(function($) {
 			$collapseSingleButtonTable = '<td class="repeater-button-cell"><div class="repeater-button-cell-div"><button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-single"><span class="screen-reader-text">' + acfrcL10n.collapseRow + '</span></button></div></td>',
 			$collapseSingleButton = '<button type="button" role="button" class="button field-repeater-toggle field-repeater-toggle-single"><span class="screen-reader-text">' + acfrcL10n.collapseRow + '</span></button>';
 
+			// Collapse all fields by default
+			acfRepeaterToggleAll();
+
+
 		// find each repeater & flexible instance, add the button if the field uses the row layout
 		$('.field_type-repeater, .field_type-flexible_content').each( function() {
 			var	$repeater = $(this);
@@ -137,6 +141,13 @@ jQuery(document).ready(function($) {
 			$rowsetButton  = $that,
 			$rowsetWrapper = $that.parent();
 
+			if ($rowsetWrapper.length == 0) {
+				$rowsetWrapper = $('.field_type-repeater');
+			}
+			else {
+				$rowsetWrapper = $that.parent();
+			}
+
 		// select either nested or unnested repeater rows, not both
 		if( true === $rowsetWrapper.data('acf-repeater-nested') ) {
 			$rows = $('.row:data(acf-repeater-nested),.layout', $rowsetWrapper);
@@ -154,7 +165,9 @@ jQuery(document).ready(function($) {
 		}
 
 		// prevent bubbling up to parent repeater rowset
-		event.stopPropagation();
+		if (event) {
+			event.stopPropagation();
+		}
 	}
 
 	/**
@@ -187,7 +200,9 @@ jQuery(document).ready(function($) {
 		}
 
 		// prevent bubbling up to parent row button
-		event.stopPropagation();
+		if (event) {
+			event.stopPropagation();
+		}
 	}
 
 	/**
