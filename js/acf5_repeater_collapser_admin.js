@@ -170,7 +170,9 @@ jQuery(document).ready(function($) {
 		}
 
 		// prevent bubbling up to parent repeater rowset
-		event.stopPropagation();
+		if (event) {
+            event.stopPropagation();
+        }
 	}
 
 	/**
