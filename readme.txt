@@ -1,6 +1,6 @@
 ﻿=== Advanced Custom Fields Repeater & Flexible Content Fields Collapser ===
 Contributors: mrwweb
-Tags: advanced custom fields, acf, repeater
+Tags: adopt-me, advanced custom fields, acf, repeater
 Requires at least: 3.0.0
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
 Tested up to: 4.3
@@ -12,17 +12,19 @@ Easier sorting for large repeated fields in the Advanced Custom Fields plugin.
 
 == Description ==
 
+> This plugin has not worked with ACF5 PRO since August 2015. I've come to the unfortunate conclusion that I can no longer support this plugin or have enough interest to fix it. If you like this plugin, ant to see it working again, and can you fix it please consider adopting this plugin! [Contact me](https://mrwweb.com/contact/) if you're interested.
+
 The Repeater and Flexible Content Field features make ACF really powerful, but if you have more than a few fields with either, they becomes unwieldy to sort. This plugin collapses each instance of the repeated fields—**only for the "Row" layout**—to allow for easy sorting.
 
-*To help identify each repeater field group when collapsed, the first field of each repeated field group is shown. See the [screenshots](http://wordpress.org/plugins/advanced-custom-field-repeater-collapser/screenshots/) for an example.*
+*To help identify each repeater field group when collapsed, the first field of each repeated field group is shown. See the [screenshots](https://wordpress.org/plugins/advanced-custom-field-repeater-collapser/screenshots/) for an example.*
 
-**Want support for the table layout? Sponsor an update!** [Contact me](http://mrwweb.com/contact/) about sponsoring this feature if you're interested.
+**Want support for the table layout? Sponsor an update!** [Contact me](https://mrwweb.com/contact/) about sponsoring this feature if you're interested.
 
 ------------------------------------------------
 
 **Requirements:**
 
-* [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) 4.X *AND* one or both of the [Repeater Field](http://www.advancedcustomfields.com/add-ons/repeater-field/) or [Flexible Content Field](http://www.advancedcustomfields.com/add-ons/flexible-content-field/) paid add-ons
+* [Advanced Custom Fields](https://wordpress.org/extend/plugins/advanced-custom-fields/) 4.X *AND* one or both of the [Repeater Field](http://www.advancedcustomfields.com/add-ons/repeater-field/) or [Flexible Content Field](http://www.advancedcustomfields.com/add-ons/flexible-content-field/) paid add-ons
 * ACF 5.X PRO
 * Both ACF 4.X and ACF 5.X: Use the **Row Layout**
 
@@ -36,8 +38,8 @@ Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Col
 
 **Other contributors:**
 
-* [brasofilo](http://profiles.wordpress.org/brasofilo/)
-* [weskoop](http://profiles.wordpress.org/weskoop/)
+* [brasofilo](https://profiles.wordpress.org/brasofilo/)
+* [weskoop](https://profiles.wordpress.org/weskoop/)
 * [philiphetue](https://github.com/philiphetue)
 * [robneu](https://github.com/robneu)
 
@@ -75,6 +77,10 @@ With the addition of the ability to collapse single rows, the button now is alwa
 6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
+
+= 1 June 2016 =
+* Added `adopt-me` tag. Please [contact me](https://mrwweb.com/contact/) if you're interested.
+
 = 1.4.3 (15 Oct 2015) =
 * THIS UPDATE DOES NOT FIX THE PLUGIN WITH ACF 5.3.1. IT IS PURELY FOR FUTURE TRANSLATION FEATURES REQUIRED BY THE PLUGIN REPOSITORY.
 * [i18n] Add text-domain and make all strings translatable for upcoming translate.wordpress.org plugin migration.

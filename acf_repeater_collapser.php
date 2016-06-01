@@ -34,7 +34,7 @@ function acf_repeater_collapser_assets() {
 
 	$uri     = plugin_dir_url( __FILE__ );
 	$version = ACF_REPEATER_COLLAPSER_VERSION;
-	$prefix  = version_compare( $acf_version, '5.0', '>=' ) ? 'acf5' : 'acf4';
+	$prefix  = version_compare( $acf_version, '5.3.1', '>=' ) ? 'acf5' : 'acf4';
 
 	wp_enqueue_script(
 		'acf_repeater_collapser_admin_js',
@@ -62,7 +62,7 @@ function acf_repeater_collapser_acf5_compat() {
 	if( ! class_exists( 'acf' ) ) {
 		return;
 	}
-	
+
 	$acf_version = acf()->settings['version'];
 	if( version_compare( $acf_version, '5.0', '>=' ) ) {
 		add_filter( 'acf/compatibility/field_wrapper_class', '__return_true' );
