@@ -12,7 +12,7 @@ Easier sorting for large repeated fields in the Advanced Custom Fields plugin.
 
 == Description ==
 
-> This plugin has not worked with ACF5 PRO since August 2015. I've come to the unfortunate conclusion that I can no longer support this plugin or have enough interest to fix it. If you like this plugin, ant to see it working again, and can you fix it please consider adopting this plugin! [Contact me](https://mrwweb.com/contact/) if you're interested.
+> This plugin has not worked with ACF5 PRO since August 2015. I've come to the unfortunate conclusion that I can no longer support this plugin or have enough interest to fix it. If you like this plugin, want to see it working again, and can you fix it please consider adopting this plugin! [Contact me](https://mrwweb.com/contact/) if you're interested.
 
 The Repeater and Flexible Content Field features make ACF really powerful, but if you have more than a few fields with either, they becomes unwieldy to sort. This plugin collapses each instance of the repeated fields—**only for the "Row" layout**—to allow for easy sorting.
 
