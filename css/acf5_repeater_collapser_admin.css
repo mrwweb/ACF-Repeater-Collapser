@@ -23,7 +23,7 @@
 	top:0;
 	left:3px;
 	content: "";
-	background: url(../images/icon--expand.svg);
+	background: url(../images/icon--collapse.svg);
 	background-size: 10px;
 	width: 20px;
 	height: 20px;
@@ -35,8 +35,7 @@
 
 }
 .collapse--active:before { 
-	
-	background: url(../images/icon--collapse.svg);
+	background: url(../images/icon--expand.svg);
 	background-size: 10px;
 	width: 20px;
 	height: 20px;
