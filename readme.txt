@@ -1,6 +1,6 @@
 ﻿=== Advanced Custom Fields Repeater & Flexible Content Fields Collapser ===
-Contributors: mrwweb
-Tags: adopt-me, advanced custom fields, acf, repeater
+Contributors: aaronrutley,mrwweb
+Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.0
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
 Tested up to: 4.3
@@ -12,7 +12,7 @@ Easier sorting for large repeated fields in the Advanced Custom Fields plugin.
 
 == Description ==
 
-> This plugin has not worked with ACF5 PRO since August 2015. I've come to the unfortunate conclusion that I can no longer support this plugin or have enough interest to fix it. If you like this plugin, want to see it working again, and can you fix it please consider adopting this plugin! [Contact me](https://mrwweb.com/contact/) if you're interested.
+> <strong>8 March 2017</strong>: Good news! [Aaron Rutley](https://profiles.wordpress.org/aaronrutley) has adopted this plugin. Aaron has significant experience with ACF and is a user of this plugin, making him an excellent candidate for maintaining this plugin moving forward. [Mark Root-Wiley](https://profiles.wordpress.org/mrwweb) will no longer be an active contributor or providing support. Aaron has worked up a new version of the plugin that improves the interface, fixes ACF5 support, and continues ACF4 support. It will be available soon and is [available for beta testing](https://github.com/mrwweb/ACF-Repeater-Collapser/archive/develop.zip).
 
 The Repeater and Flexible Content Field features make ACF really powerful, but if you have more than a few fields with either, they becomes unwieldy to sort. This plugin collapses each instance of the repeated fields—**only for the "Row" layout**—to allow for easy sorting.
 
@@ -31,10 +31,6 @@ The Repeater and Flexible Content Field features make ACF really powerful, but i
 ------------------------------------------------
 
 Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Collapser).
-
-**Sponsors:**
-
-* [Angie Meeker Designs](http://angiemeekerdesigns.com/) — Single Row Collapsing Development
 
 **Other contributors:**
 
