@@ -52,7 +52,7 @@
 		$('.acf-row').removeClass('-collapsed');
 		
 		// Append the collapse button  
-		$( ".acf-field-repeater > .acf-label label" ).append('<span class="collapse">' + acfrcL10n.collapseAll + '</span>');
+		$( ".acf-field-repeater > .acf-label label" ).append('<button class="collapse">' + acfrcL10n.collapseAll + '</button>');
 
 		// Check if we should show the button 
 		$( ".acf-field-repeater" ).each(function( index ) {
@@ -60,7 +60,9 @@
 		});
 		
 		// On the click of the repeater toggle 
-		$('.acf-field-repeater > .acf-label span.collapse').click(function( event ) {
+		$('.acf-field-repeater > .acf-label button.collapse').click(function( event ) {
+			
+			event.preventDefault();
 			
 			var active = $(this).hasClass('collapse--active');
 			
@@ -86,10 +88,12 @@
 		**/
 		
 		// Append the collapse button
-		$(this).find('.acf-field-flexible-content > .acf-label label').append('<span class="collapse collapse--flexi">' + acfrcL10n.collapseAll + '</span>');			
+		$(this).find('.acf-field-flexible-content > .acf-label label').append('<button class="collapse collapse--flexi">' + acfrcL10n.collapseAll + '</button>');			
 
 		// On the click of the toggle 
-		$('.acf-field-flexible-content > .acf-label span.collapse').click(function( event ) {
+		$('.acf-field-flexible-content > .acf-label button.collapse').click(function( event ) {
+			
+			event.preventDefault();
 			
 			var active = $(this).hasClass('collapse--active');
 			

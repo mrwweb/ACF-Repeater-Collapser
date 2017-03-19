@@ -16,6 +16,12 @@
 .collapse:hover { 
 	border:1px solid #6a6f74;
 	background-color: #FFF;
+	cursor: pointer;
+}
+.collapse:focus { 
+	background-color: #FFF;
+	box-shadow: none;
+	outline:none;
 }
 .collapse:before { 
 	position: absolute;
