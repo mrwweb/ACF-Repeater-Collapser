@@ -22,9 +22,9 @@
 		
 		// If the repeater is empty - hide (target the first repeater to support nested repeaters)
 		if( $(this).find('.acf-repeater').first().is('.-empty')) { 
-			$(this).find('.collapse').hide();
+			$(this).find('.acf-repeater .collapse').hide();
 		} else { 
-			$(this).find('.collapse').show();
+			$(this).find('.acf-repeater .collapse').show();
 		}
 		
 	}
@@ -32,9 +32,9 @@
 	// Check if we should show or hide the flexi collapse button 
 	$.fn.flexiShowcollapse = function() { 
 		if( $(this).find('.acf-flexible-content').is('.empty')) { 
-			$(this).find('.collapse').hide();
+			$(this).find('.collapse').first().hide();
 		} else { 
-			$(this).find('.collapse').show();
+			$(this).find('.collapse').first().show();
 		}
 	}
 
@@ -59,7 +59,7 @@
 		});
 		
 		// On the click of the repeater toggle 
-		$('.acf-field-repeater > .acf-label .collapse').click(function( event ) {
+		$('body').on('click','.acf-field-repeater .collapse', function( event ) {
 			
 			event.preventDefault();
 			
@@ -90,7 +90,7 @@
 		$(this).find('.acf-field-flexible-content > .acf-label label').append('<button class="collapse collapse--flexi">' + acfrcL10n.collapseAll + '</button>');			
 
 		// On the click of the toggle 
-		$('.acf-field-flexible-content > .acf-label button.collapse').click(function( event ) {
+		$('.acf-field-flexible-content').find('.collapse').first().click(function( event ) {
 			
 			event.preventDefault();
 			
