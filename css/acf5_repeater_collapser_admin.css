@@ -3,10 +3,9 @@
 	position: relative;
 	border:1px solid #d1d1d1;
 	background:#FFF;
-	color:#e5e5e5;
 	float:right; 
 	font-weight:normal;
-	color:#b0a9a8;
+	color:#6a6f74;
 	padding:1px 10px 1px 30px;
 	text-align: right;
 	min-width: 114px;
@@ -15,7 +14,7 @@
 	user-select: none;
 }
 .collapse:hover { 
-	border:1px solid #d1d1d1;
+	border:1px solid #6a6f74;
 	background-color: #FFF;
 }
 .collapse:before { 
