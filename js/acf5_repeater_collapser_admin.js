@@ -7,22 +7,21 @@
 	$.fn.repeaterShowcollapse = function() { 
 		
 		// If we can find at the acf icon to collapse the fields - show (or remove)
-		if ( $(this).find('.acf-icon.-collapse').exists() ) {
-			$(this).find('.collapse').show();
+		if ( $(this).find('a.-collapse').exists() ) {
+			//$(this).find('.collapse').show();
+			//console.log('collapse exists');
 		} else { 
 			
 			// If we can't find a collapse button
 			// The user hasn't set the collapsed target, so lets set one
-			$( ".acf-row" ).each(function( index ) {
+			$(this).find('.acf-row').each(function( index ) {
 				$(this).find('.acf-field').first().addClass('-collapsed-target');
-				
-				$(this).find('.acf-row-handle').prepend('<a class="acf-icon -collapse small" href="#" data-event="collapse-row" title="Click to toggle"></a>');
 			});
 			
 		}
 		
-		// If the repeater is empty - hide 
-		if( $(this).find('.acf-repeater').is('.-empty')) { 
+		// If the repeater is empty - hide (target the first repeater to support nested repeaters)
+		if( $(this).find('.acf-repeater').first().is('.-empty')) { 
 			$(this).find('.collapse').hide();
 		} else { 
 			$(this).find('.collapse').show();
@@ -60,7 +59,7 @@
 		});
 		
 		// On the click of the repeater toggle 
-		$('.acf-field-repeater > .acf-label button.collapse').click(function( event ) {
+		$('.acf-field-repeater > .acf-label .collapse').click(function( event ) {
 			
 			event.preventDefault();
 			
