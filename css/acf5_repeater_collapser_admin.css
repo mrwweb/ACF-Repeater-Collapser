@@ -1,9 +1,10 @@
 .collapse { 
 	box-sizing: border-box;
-	position: relative;
+	position: absolute;
+	top:15px;
+	right:12px;
 	border:1px solid #d1d1d1;
 	background:#FFF;
-	float:right; 
 	font-weight:normal;
 	color:#6a6f74;
 	padding:1px 10px 1px 30px;
@@ -55,10 +56,7 @@
 	color:#999;
 }
 
-.acf-fields.-left .collapse{ 
-	float:left;
-	margin-top:5px;
-}
+
 
 /*.acf-flexible-content .layout .acf-fc-layout-handle:hover { 
 	background: #f9f9f9;
@@ -71,3 +69,11 @@
 .acf-flexible-content .layout.-collapsed .acf-fc-layout-order { 
 	background: #FFF;
 }*/
+
+
+
+.acf-fields.-left .collapse{ 
+	position: relative;
+	left:0;
+	top:0;
+}

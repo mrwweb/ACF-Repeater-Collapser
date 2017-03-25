@@ -5,7 +5,7 @@
 
 	// Check if we should show the repeter collapse button 
 	$.fn.repeaterShowcollapse = function() { 
-		
+
 		// If we can find at the acf icon to collapse the fields - show (or remove)
 		if ( $(this).find('a.-collapse').exists() ) {
 			//$(this).find('.collapse').show();
@@ -22,9 +22,9 @@
 		
 		// If the repeater is empty - hide (target the first repeater to support nested repeaters)
 		if( $(this).find('.acf-repeater').first().is('.-empty')) { 
-			$(this).find('.acf-repeater .collapse').hide();
+			$(this).find('.collapse').hide();
 		} else { 
-			$(this).find('.acf-repeater .collapse').show();
+			$(this).find('.collapse').show();
 		}
 		
 	}
@@ -51,7 +51,7 @@
 		$('.acf-row').removeClass('-collapsed');
 		
 		// Append the collapse button  
-		$( ".acf-field-repeater > .acf-label label" ).append('<button class="collapse">' + acfrcL10n.collapseAll + '</button>');
+		$( ".acf-field-repeater > .acf-label" ).append('<button class="collapse">' + acfrcL10n.collapseAll + '</button>');
 
 		// Check if we should show the button 
 		$( ".acf-field-repeater" ).each(function( index ) {
