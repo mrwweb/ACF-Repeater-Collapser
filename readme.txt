@@ -1,10 +1,9 @@
 ﻿=== Advanced Custom Fields Repeater & Flexible Content Fields Collapser ===
-Contributors: mrwweb
-Tags: adopt-me, advanced custom fields, acf, repeater
+Contributors: mrwweb, aaronrutley
+Tags: advanced custom fields, acf, repeater
 Requires at least: 3.0.0
-Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=522061398
 Tested up to: 4.3
-Stable tag: 1.4.3
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,13 +11,9 @@ Easier sorting for large repeated fields in the Advanced Custom Fields plugin.
 
 == Description ==
 
-> This plugin has not worked with ACF5 PRO since August 2015. I've come to the unfortunate conclusion that I can no longer support this plugin or have enough interest to fix it. If you like this plugin, ant to see it working again, and can you fix it please consider adopting this plugin! [Contact me](https://mrwweb.com/contact/) if you're interested.
-
 The Repeater and Flexible Content Field features make ACF really powerful, but if you have more than a few fields with either, they becomes unwieldy to sort. This plugin collapses each instance of the repeated fields—**only for the "Row" layout**—to allow for easy sorting.
 
 *To help identify each repeater field group when collapsed, the first field of each repeated field group is shown. See the [screenshots](https://wordpress.org/plugins/advanced-custom-field-repeater-collapser/screenshots/) for an example.*
-
-**Want support for the table layout? Sponsor an update!** [Contact me](https://mrwweb.com/contact/) about sponsoring this feature if you're interested.
 
 ------------------------------------------------
 
@@ -30,20 +25,13 @@ The Repeater and Flexible Content Field features make ACF really powerful, but i
 
 ------------------------------------------------
 
-Contribute to [this plugin on GitHub](https://github.com/mrwweb/ACF-Repeater-Collapser).
-
-**Sponsors:**
-
-* [Angie Meeker Designs](http://angiemeekerdesigns.com/) — Single Row Collapsing Development
-
 **Other contributors:**
 
+* [mrwweb](https://github.com/mrwweb)
 * [brasofilo](https://profiles.wordpress.org/brasofilo/)
 * [weskoop](https://profiles.wordpress.org/weskoop/)
 * [philiphetue](https://github.com/philiphetue)
 * [robneu](https://github.com/robneu)
-
-This plugin began as a [support forum thread](http://support.advancedcustomfields.com/discussion/comment/16239) on the ACF site.
 
 == Frequently Asked Questions ==
 
@@ -58,7 +46,7 @@ When possible, use a short field (like a text field or dropdown) as the first ro
 = Can I collapse individual rows? =
 Now you can, as of version 1.3.0.
 
-= What exactly is the "Collapse All Rows" button behavior =
+= What exactly is the "Collapse All Rows" button behaviour =
 With the addition of the ability to collapse single rows, the button now is always in "Collapse" mode unless all rows are collapsed. Then it's "Expand."
 
 == Installation ==
@@ -77,6 +65,10 @@ With the addition of the ability to collapse single rows, the button now is alwa
 6. New in v1.3.0, you can collapse individual fields! (Thanks to Angie Meeker Designs for sponsoring this feature.)
 
 == Changelog ==
+
+= 1.5.0 =
+* [ACF v4] - Style fixes and new icons
+* [ACF v5] - New JS so Collapse All & Expand All now works again
 
 = 1 June 2016 =
 * Added `adopt-me` tag. Please [contact me](https://mrwweb.com/contact/) if you're interested.

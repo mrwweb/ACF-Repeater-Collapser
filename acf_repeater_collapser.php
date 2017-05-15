@@ -4,8 +4,8 @@
  * Plugin URI:  https://github.com/mrwweb/ACF-Repeater-Collapser
  * Description: Provides a way to collapse and expand repeater field instances in order to enable better sorting.
  * Version:     1.5.0
- * Author:      Mark Root-Wiley, Aaron Rutley
- * Author URI:  https://github.com/mrwweb/ACF-Repeater-Collapser
+ * Author:      Aaron Rutley
+ * Author URI:  https://hookturn.io
  * Text Domain: advanced-custom-field-repeater-collapser
  */
 
