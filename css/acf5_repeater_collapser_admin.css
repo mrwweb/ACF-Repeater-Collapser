@@ -1,92 +1,79 @@
-/* Expand / Collapse Buttons */
-.field-repeater-toggle-all {
-	float:right;
-	margin: -5px 0 15px !important;
-}
-
-.button.field-repeater-toggle-single {
-	padding: 1px 1px 0 1px;
-}
-.layout .field-repeater-toggle-single {
-	margin: 0 5px 0 -5px;
-}
-.repeater-button-cell {
-	background: #f9f9f9 !important;
-	padding: 0 !important;
-	vertical-align: middle !important;
-	text-align: center !important;
-	border-right-color: #e1e1e1 !important;
-	width: 30px !important;
-	/* Sorry 'bout the !importants. They are gross. Sadly, so are the ACF selectors I have to battle. */
-}
-/* Grossness: http://css-tricks.com/absolutely-position-element-within-a-table-cell/ */
-.repeater-button-cell-div {
-	position: relative;
-}
-
-.field_type-flexible_content .layout.row-layout {
-	padding-left: 30px;
-	background: transparent;
-}
-
-.field_type-flexible_content .field-repeater-toggle-single {
+.collapse { 
+	box-sizing: border-box;
 	position: absolute;
-	top: 50%;
-	margin-top: -15px;
-	left: 5px;
+	top:15px;
+	right:12px;
+	border:1px solid #d1d1d1;
+	background:#FFF;
+	font-weight:normal;
+	color:#6a6f74;
+	padding:1px 10px 1px 30px;
+	text-align: right;
+	min-width: 114px;
+	transition: all 100ms ease-in-out;
+	background-color: rgba(249, 249, 249, 0.50);
+	user-select: none;
 }
-/* Weird positioning exception */
-.field_type-flexible_content .field_type-repeater .field-repeater-toggle-single {
-	left: 8px;
+.collapse:hover { 
+	border:1px solid #6a6f74;
+	background-color: #FFF;
+	cursor: pointer;
 }
-
-.field_type-flexible_content .acf-fc-layout-handle {
-	background: #fff;
+.collapse:focus { 
+	background-color: #FFF;
+	box-shadow: none;
+	outline:none;
 }
-
-.field-repeater-toggle::before {
-	content: "\f506";
-	display: inline;
-	-webkit-font-smoothing: antialiased;
-	font: normal 20px/1 'dashicons';
-	vertical-align: text-bottom;
-	color: #777;
-}
-.field-repeater-toggle-all::before {
-	margin: 3px 5px 0 0;
-}
-
-.collapsed-repeater .field-repeater-toggle-all::before,
-.collapsed-row .field-repeater-toggle-single::before {
-	content: "\f211";
-}
-
-.acf_flexible_content,
-.repeater {
-  clear: both;
-}
-
-.acf-table {
-	position: relative;
-}
-
-.collapsed-row .acf-table tr {
-	display: none;
-}
-
-.collapsed-row .acf-table tr:first-child {
-	display: table-row;
-}
-
-/* "Masks" the first field in order to prevent clicking on it */
-.collapsed-row .acf-table tr::after {
+.collapse:before { 
 	position: absolute;
-	top: 0; bottom: 0; left: 0px; right: 0;
-	display: block;
-	content: ' ';
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba( 244, 244, 244, .2 )), to(rgba( 244, 244, 244, 1 )));
-	background: -o-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
-	background: -moz-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
-	background: -webkit-linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
-	background: linear-gradient( rgba( 244, 244, 244, .2 ), rgba( 244, 244, 244, 1 ) );
+	top:0;
+	left:3px;
+	content: "";
+	background: url(../images/icon--collapse.svg);
+	background-size: 10px;
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.collapse--active { 
+
+}
+.collapse--active:before { 
+	background: url(../images/icon--expand.svg);
+	background-size: 10px;
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.flexi-label { 
+	font-style: italic;
+	padding-left: 5px;
+	font-size: 12px;
+	color:#999;
+}
+
+
+
+/*.acf-flexible-content .layout .acf-fc-layout-handle:hover { 
+	background: #f9f9f9;
+}*/
+
+.acf-flexible-content .layout .acf-fc-layout-handle { 
+	background: rgba(249, 249, 249, 0.50);
+}
+/*.acf-flexible-content .layout .acf-fc-layout-handle:hover .acf-fc-layout-order,
+.acf-flexible-content .layout.-collapsed .acf-fc-layout-order { 
+	background: #FFF;
+}*/
+
+
+
+.acf-fields.-left .collapse{ 
+	position: relative;
+	left:0;
+	top:0;
 }

@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name: Advanced Custom Fields Repeater Collapser
+ * Plugin Name: Advanced Custom Fields: Repeater Collapser
  * Plugin URI:  https://github.com/mrwweb/ACF-Repeater-Collapser
  * Description: Provides a way to collapse and expand repeater field instances in order to enable better sorting.
- * Version:     1.4.3
- * Author:      Mark Root-Wiley
- * Author URI:  http://mrwweb.com
+ * Version:     1.5.0
+ * Author:      Aaron Rutley
+ * Author URI:  https://hookturn.io
  * Text Domain: advanced-custom-field-repeater-collapser
  */
 
-define( 'ACF_REPEATER_COLLAPSER_VERSION', '1.4.3' );
+define( 'ACF_REPEATER_COLLAPSER_VERSION', '1.5.0' );
 
 /**
  * load text domain
@@ -47,6 +47,8 @@ function acf_repeater_collapser_assets() {
 		'collapseRow' => esc_html__( 'Collapse Row', 'advanced-custom-field-repeater-collapser' ),
 		'expandRows' => esc_html__( 'Expand All Rows', 'advanced-custom-field-repeater-collapser' ),
 		'expandRow' => esc_html__( 'Expand Row', 'advanced-custom-field-repeater-collapser' ),
+		'expandAll' => esc_html__( 'Expand All', 'advanced-custom-field-repeater-collapser' ),
+		'collapseAll' => esc_html__( 'Collapse All', 'advanced-custom-field-repeater-collapser' ),
 	) );
 
 	wp_enqueue_style(
@@ -55,16 +57,4 @@ function acf_repeater_collapser_assets() {
 		false,
 		$version
 	);
-}
-
-add_action( 'plugins_loaded', 'acf_repeater_collapser_acf5_compat' );
-function acf_repeater_collapser_acf5_compat() {
-	if( ! class_exists( 'acf' ) ) {
-		return;
-	}
-
-	$acf_version = acf()->settings['version'];
-	if( version_compare( $acf_version, '5.0', '>=' ) ) {
-		add_filter( 'acf/compatibility/field_wrapper_class', '__return_true' );
-	}
 }
