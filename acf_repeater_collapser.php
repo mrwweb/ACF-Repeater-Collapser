@@ -16,7 +16,7 @@ define( 'ACF_REPEATER_COLLAPSER_VERSION', '1.5.0' );
  */
 add_action( 'plugins_loaded', 'acf_repeater_collapser_textdomain' );
 function acf_repeater_collapser_textdomain() {
-	load_plugin_textdomain( 'advanced-custom-field-repeater-collapser' );
+	load_plugin_textdomain( 'advanced-custom-field-repeater-collapser', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 
 /* Load the javascript and CSS files on the ACF admin pages */
